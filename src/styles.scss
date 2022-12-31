@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+
+ 
+    :root{
+      --color-primary: #0A4A28;
+      --color-secondary: #579540;
+      --color-tertiary: #FFFFFF;
+      --color-quaternary: #EFFFEA;
+      --color-quinary: #000000;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Lato', sans-serif;
+    background-color: var(--primary);
+    color: var(--tertiary);
+  }
+
+  .uk-dropdown[_ngcontent-pop-c18] ul[_ngcontent-pop-c18] {
+    width: 7rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    &::hover {
+      background-color: #000;
+      color: #fff;
+    }
+}

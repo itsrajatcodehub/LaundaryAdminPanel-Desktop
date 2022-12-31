@@ -1,0 +1,105 @@
+<div id="wrapper" (window:resize)="onWindowResize()">
+    
+  <main>
+    
+    <header>
+        
+      <button
+          *ngIf="!largeScreen"
+          class="uk-navbar-toggle"
+          uk-navbar-toggle-icon
+          id="toggle-button"
+          (click)="toggleSidebar()"
+        ></button>
+      <div class="logo_cont">
+        <img src="assets/mainIcon.png" class="logo" />
+      </div>
+
+      <div class="datePannel">
+        <b>
+          {{ currentPanel }}
+        </b>
+        <br />
+
+       {{date}} 
+      </div>
+      <div class="uk-margin search11">
+        <form class="uk-search uk-search-default">
+          <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+          <input
+            class="uk-search-input"
+            type="search"
+            placeholder="Search Anything here..."
+            aria-label="Search"
+          />
+        </form>
+      </div>
+      <div class="user">
+          <img
+          src="https://i.pravatar.cc/300"
+          alt=""
+          routerLink="../admin/profile"
+          />
+          <b class="name">Mohon Raj</b>
+          <i class="ri-notification-3-line" 
+          routerLink="/home/notification" ></i>
+      </div>
+<div class="conatiner">
+    
+</div>
+    </header>
+    
+    <div id="overlay" (click)="showSidebar && toggleSidebar()"></div>
+    
+  </main>
+</div>
+<div id="sidebar-container">
+    <div
+      [style]="largeScreen || showSidebar ? '' : 'display: none'"
+      id="sidebar-container"
+    >
+      <aside id="sidebar">
+    
+        <ul id="sidebar-ul">
+          <li class="sidebar-li">
+            <a
+              routerLink="/home/dashboard"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              >
+              <i class="ri-dashboard-2-line"></i>
+              <span class="sidebar-text">Dashboard</span></a
+            >
+          </li> <li class="sidebar-li">
+            <a
+              routerLink="/home/orders"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              ><i class="ri-archive-line"></i>
+              <span class="sidebar-text">Orders</span></a
+            >
+          </li>
+          <li class="sidebar-li">
+            <a
+              routerLink="/home/users"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              >
+              <i class="ri-user-line"></i>
+            <span class="sidebar-text">User</span></a
+            >
+          </li>
+       
+ 
+        </ul>
+      </aside>
+    </div>
+    <div id="container">
+
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  

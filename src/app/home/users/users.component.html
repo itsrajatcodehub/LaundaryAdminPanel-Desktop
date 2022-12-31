@@ -1,0 +1,220 @@
+<div class="container">
+  <div class="header_bar">
+    <button (click)="addNewUserDetails()">
+      <i class="ri-add-line"></i>
+      Add New User
+    </button>
+    <button>
+      <i class="ri-calendar-line"></i>
+      Start Date
+      <input type="date">
+    </button>
+    <button>
+      <i class="ri-calendar-line"></i>
+      End Date
+      <input type="date">
+    </button>
+  </div>
+
+  <div class="orderTable">
+    <button id="report"><i class="ri-download-line"></i> Report</button>
+    <table>
+      <tr>
+        <th width="15%">Customer Name</th>
+        <th width="15%">Email</th>
+        <th width="15%">Phone</th>
+        <th width="15%">Total No. Order</th>
+        <th width="30%">Address</th>
+        <th width="10%">Action</th>
+      </tr>
+      <tr>
+        <td width="15%">Arun Arora</td>
+        <td width="15%">Example@gmail.com</td>
+        <td width="15%">
+          <button>2323232323</button>
+        </td>
+        <td width="15%">
+          <div class="date">32</div>
+        </td>
+        <td width="30%">Robert Robertson, 1234 NW Bobcat Lane</td>
+        <td width="10%">
+          <i
+            class="ri-pencil-line"
+            style="
+              color: rgb(88, 88, 88);
+              cursor: pointer;
+              margin: 0 0.3rem;
+              font-size: 1.5rem;
+            "
+            (click)="editUserDetails()"
+          ></i>
+          <i
+            class="ri-delete-bin-5-line"
+            style="
+              color: red;
+              cursor: pointer;
+              margin: 0 0.3rem;
+              font-size: 1.5rem;
+            "
+            uk-toggle="target: #deleteUser"
+          ></i>
+        </td>
+      </tr>
+      <tr>
+        <td width="15%">Arun Arora</td>
+        <td width="15%">Example@gmail.com</td>
+        <td width="15%">
+          <button>2323232323</button>
+        </td>
+        <td width="15%">
+          <div class="date">32</div>
+        </td>
+        <td width="30%">Robert Robertson, 1234 NW Bobcat Lane</td>
+        <td width="10%">
+          <i
+            class="ri-pencil-line"
+            style="
+              color: rgb(88, 88, 88);
+              cursor: pointer;
+              margin: 0 0.3rem;
+              font-size: 1.5rem;
+            "
+            (click)="editUserDetails()"
+          ></i>
+          <i
+            class="ri-delete-bin-5-line"
+            style="
+              color: red;
+              cursor: pointer;
+              margin: 0 0.3rem;
+              font-size: 1.5rem;
+            "
+            uk-toggle="target: #deleteUser"
+          ></i>
+        </td>
+      </tr>
+      <tr>
+        <td width="15%">Arun Arora</td>
+        <td width="15%">Example@gmail.com</td>
+        <td width="15%">
+          <button>2323232323</button>
+        </td>
+        <td width="15%">
+          <div class="date">32</div>
+        </td>
+        <td width="30%">Robert Robertson, 1234 NW Bobcat Lane</td>
+        <td width="10%">
+          <i
+            class="ri-pencil-line"
+            style="
+              color: rgb(88, 88, 88);
+              cursor: pointer;
+              margin: 0 0.3rem;
+              font-size: 1.5rem;
+            "
+            (click)="editUserDetails()"
+          ></i>
+          <i
+            class="ri-delete-bin-5-line"
+            style="
+              color: red;
+              cursor: pointer;
+              margin: 0 0.3rem;
+              font-size: 1.5rem;
+            "
+            uk-toggle="target: #deleteUser"
+          ></i>
+        </td>
+      </tr>
+      <tr>
+        <td width="15%">Arun Arora</td>
+        <td width="15%">Example@gmail.com</td>
+        <td width="15%">
+          <button>2323232323</button>
+        </td>
+        <td width="15%">
+          <div class="date">32</div>
+        </td>
+        <td width="30%">Robert Robertson, 1234 NW Bobcat Lane</td>
+        <td width="10%">
+          <i
+            class="ri-pencil-line"
+            style="
+              color: rgb(88, 88, 88);
+              cursor: pointer;
+              margin: 0 0.3rem;
+              font-size: 1.5rem;
+            "
+            (click)="editUserDetails()"
+          ></i>
+          <i
+            class="ri-delete-bin-5-line"
+            style="
+              color: red;
+              cursor: pointer;
+              margin: 0 0.3rem;
+              font-size: 1.5rem;
+            "
+            uk-toggle="target: #deleteUser"
+          ></i>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div id="newUser" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+    <i class="ri-close-circle-line" uk-toggle="target: #newUser"></i>
+    <b class="modal-header" *ngIf="!editUser">Add New User </b>
+    <b class="modal-header" *ngIf="editUser">Edit User </b>
+    <div class="user">
+      <img src="https://i.pravatar.cc/300" alt="" />
+      <button class="cam">
+        <!-- <i class="ri-delete-bin-5-line"></i> -->
+        <i class="ri-camera-3-line"></i>
+      </button>
+      <div class="update">
+        <button>
+          <i class="ri-delete-bin-5-line"></i>
+        </button>
+        <button>
+          <!-- <i class="ri-delete-bin-5-line"></i> -->
+          <i class="ri-pencil-line"></i>
+        </button>
+      </div>
+    </div>
+
+    <form class="orderForm">
+      <input placeholder="Full Name" />
+      <input placeholder="PinCode" />
+      <input placeholder="Alternative Phone No" />
+      <input placeholder="Landmark" />
+      <input placeholder="Phone No" />
+      <select name="country" id="country">
+        <option value="India">India</option>
+        <option value="Albania">Albania</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="arab">arab</option>
+      </select>
+      <textarea
+        placeholder="Address"
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+      ></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
+</div>
+<div id="deleteUser" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+   
+    <p> <i class="ri-delete-bin-6-line" style="font-size: 1rem;color: red"></i>Are you sure You Want To delete User ?</p>
+    <div class="buttons">
+      <button>Confirm</button>
+      <button uk-toggle="target: #deleteUser">Delete</button>
+    </div>
+  </div>
+</div>

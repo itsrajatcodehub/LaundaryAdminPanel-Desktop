@@ -1,0 +1,220 @@
+<div class="container">
+  <div class="header_bar">
+    <div class="uk-inline">
+      <button class="uk-button uk-button-default" type="button">
+        <!-- <i class="ri-arrow-drop-down-line"></i> -->
+        <i class="ri-arrow-drop-down-line"></i>
+        All Orders
+      </button>
+      <div uk-dropdown class="uk-dropdown">
+        <ul>
+          <li>All</li>
+          <li>Ordered</li>
+          <li>Canceled</li>
+        </ul>
+      </div>
+    </div>
+    <button uk-toggle="target: #newBooking">
+      <i class="ri-add-line"></i>
+      New Booking
+    </button>
+    <button>
+      <i class="ri-calendar-line"></i>
+      Start Date
+
+      <input type="date" />
+    </button>
+    <button>
+      <i class="ri-calendar-line"></i>
+      End Date
+
+      <input type="date" />
+    </button>
+  </div>
+  <div class="orderCards">
+    <div class="orderCard">
+      <p>New Orders</p>
+      <div class="bar">
+        <b> 245 </b>
+        | impressive -20%
+
+        <button>
+          <i class="ri-arrow-up-line"></i>
+        </button>
+      </div>
+    </div>
+    <div class="orderCard">
+      <p>New Orders</p>
+      <div class="bar">
+        <b> 245 </b>
+        | impressive -20%
+
+        <button>
+          <i class="ri-arrow-up-line"></i>
+        </button>
+      </div>
+    </div>
+    <div class="orderCard">
+      <p>New Orders</p>
+      <div class="bar">
+        <b> 245 </b>
+        | impressive -20%
+
+        <button>
+          <i class="ri-arrow-up-line"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="orderTable">
+    <button id="report"><i class="ri-download-line"></i> Report</button>
+    <table>
+      <tr>
+        <th width="10%">ID</th>
+        <th width="10%">Contact No.</th>
+        <th width="10%">No. of Kgs</th>
+        <th width="10%">Status</th>
+        <th width="10%">Type</th>
+        <th width="10%">Order Date</th>
+        <th width="10%">Time Of Order</th>
+        <th width="10%">Total</th>
+        <th width="10%">Actions</th>
+      </tr>
+      <tr>
+        <td width="10%">#UL13-072</td>
+        <td width="10%">9862156600</td>
+        <td width="10%">22</td>
+        <td width="10%">
+          <button>Delivered</button>
+        </td>
+        <td width="10%">Wash & Iron</td>
+        <td width="10%">
+          <div class="date">12 April 2021</div>
+        </td>
+        <td width="10%">12:00 PM</td>
+        <td width="10%">Rs 460</td>
+        <td width="10%">...</td>
+      </tr>
+      <tr>
+        <td width="10%">#UL13-072</td>
+        <td width="10%">9862156600</td>
+        <td width="10%">22</td>
+        <td width="10%">
+          <button>Delivered</button>
+        </td>
+        <td width="10%">Wash & Iron</td>
+        <td width="10%">
+          <div class="date">12 April 2021</div>
+        </td>
+        <td width="10%">12:00 PM</td>
+        <td width="10%">Rs 460</td>
+        <td width="10%">...</td>
+      </tr>
+      <tr>
+        <td width="10%">#UL13-072</td>
+        <td width="10%">9862156600</td>
+        <td width="10%">22</td>
+        <td width="10%">
+          <button>Delivered</button>
+        </td>
+        <td width="10%">Wash & Iron</td>
+        <td width="10%">
+          <div class="date">12 April 2021</div>
+        </td>
+        <td width="10%">12:00 PM</td>
+        <td width="10%">Rs 460</td>
+        <td width="10%">...</td>
+      </tr>
+      <tr>
+        <td width="10%">#UL13-072</td>
+        <td width="10%">9862156600</td>
+        <td width="10%">22</td>
+        <td width="10%">
+          <button>Delivered</button>
+        </td>
+        <td width="10%">Wash & Iron</td>
+        <td width="10%">
+          <div class="date">12 April 2021</div>
+        </td>
+        <td width="10%">12:00 PM</td>
+        <td width="10%">Rs 460</td>
+        <td width="10%">...</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div id="newBooking" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+    <i class="ri-close-circle-line" uk-toggle="target: #newBooking"></i>
+    <b class="modal-header">New Booking</b>
+    <p class="nameHead">Select Service</p>
+    <div class="services">
+      <div class="service">
+        <img src="assets/service4.png" class="service-icon" />
+        <b class="service-name">Wash</b>
+      </div>
+      <div class="service">
+        <img src="assets/service3.png" class="service-icon" />
+        <b class="service-name">Wash & Iron</b>
+      </div>
+      <div class="service">
+        <img src="assets/service2.png" class="service-icon" />
+        <b class="service-name">Iron</b>
+      </div>
+      <div class="service">
+        <img src="assets/service1.png" class="service-icon" />
+        <b class="service-name">Dry Clean</b>
+      </div>
+    </div>
+    <div class="uk-margin search11">
+      <form class="uk-search uk-search-default">
+        <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+        <input
+          class="uk-search-input"
+          type="search"
+          placeholder="Search Shirt,Pant Or Short ..."
+          aria-label="Search"
+        />
+      </form>
+    </div>
+    <div class="products">
+      <div class="product">
+        <img src="assets/service1.png" class="product-img" />
+        <div class="product-name">Shirt</div>
+        <i class="ri-add-line"></i>
+        <b>23</b>
+        <i class="ri-add-line"></i>
+      </div>
+      <div class="product">
+        <img src="assets/service1.png" class="product-img" />
+        <div class="product-name">Shirt</div>
+        <i class="ri-add-line"></i>
+        <b>23</b>
+        <i class="ri-add-line"></i>
+      </div>
+      <div class="product">
+        <img src="assets/service1.png" class="product-img" />
+        <div class="product-name">Shirt</div>
+        <i class="ri-add-line"></i>
+        <b>23</b>
+        <i class="ri-add-line"></i>
+      </div>
+      <div class="product">
+        <img src="assets/service1.png" class="product-img" />
+        <div class="product-name">Shirt</div>
+        <i class="ri-add-line"></i>
+        <b>23</b>
+        <i class="ri-add-line"></i>
+      </div>
+    </div>
+    <form class="orderForm">
+      <input placeholder="Full Name" />
+      <input placeholder="PinCode" />
+      <input placeholder="Alternative Phone No" />
+      <input placeholder="Landmark" />
+      <input placeholder="Phone No" />
+      <input placeholder="Address" />
+      <button>Submit</button>
+    </form>
+  </div>
+</div>
