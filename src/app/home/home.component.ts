@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { DataProvider } from '../providers/data.provider';
 
 @Component({
   selector: 'app-home',
@@ -17,12 +18,18 @@ export class HomeComponent implements OnInit {
 
 
 
-  constructor(private router: Router) {
+  constructor(private router: Router,public dataProvider:DataProvider) {
     router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
         const url = this.router.url;
         const urlArr = url.split('/');
-        const panel = urlArr[urlArr.length - 1];
+        let panel = urlArr[urlArr.length - 1];
+        if(urlArr.length > 3 && urlArr[2] == 'users' ){
+           panel = "User";
+        }
+        if(urlArr.length > 3 && urlArr[2] == 'agents' ){
+          panel = "agent";
+       }
         const panelWords = panel.split('-');
         panelWords.forEach((word, index) => {
           panelWords[index] = word.charAt(0).toUpperCase() + word.substring(1);
@@ -35,7 +42,10 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+ console.log(this.dataProvider.userData);
+
+  }
 
   onWindowResize() {
     this.largeScreen = window.innerWidth > this.breakpoint;

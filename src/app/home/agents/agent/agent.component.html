@@ -1,0 +1,71 @@
+<div id="user_container"*ngIf="this.userType == 'edit'||'add'" >
+  <form  [formGroup]="agentForm" (ngSubmit)="submit()">
+    <div id="card">
+      <div id="img_cont">
+          <img
+         [src]=" 'assets/random.jpeg' || 'https://i.pravatar.cc/300' "
+            alt="user Photo"
+          />
+          
+          <input  type="file" id="user-photo" (change)="validatePhotos($event)" >
+        <button>
+          <i class="ri-camera-line"></i>
+        </button>
+      </div>
+      <div class="edit_user">
+        Edit user
+        <i class="ri-edit-2-fill"></i>
+      </div>
+    </div>
+    <div id="form">
+      <div class="form_box">
+        <p>First Name :</p>
+        <input type="text"    formControlName="firstName">
+      </div>
+      <div class="form_box">
+        <p>Last  Name :</p>
+        <input type="text"    formControlName="lastName">
+      </div>
+      <div class="form_box">
+        <p>D.O.B:</p>
+        <input type="date"    formControlName="dob">
+      </div>
+  
+      <div class="form_box">
+        <p>Email Address :</p>
+        <input type="text"    formControlName="email">
+      </div>
+   
+      <div class="form_box">
+        <p>Phone Number :</p>
+        <input type="number"    formControlName="phoneNumber">
+      </div>
+  
+      <div class="form_box">
+        <p>Country Name :</p>
+        <input type="text"    formControlName="countryName">
+      </div>
+   
+      <div class="form_box">
+        <p>State Name :</p>
+        <input type="text"    formControlName="stateName">
+      </div>
+  
+      <div class="form_box address">
+        <p>Address:</p>
+        <textarea id="w3review" name="w3review" rows="4" cols="50"    formControlName="address">
+          </textarea>
+      </div>
+      <div class="form_box">
+        <p>City Name :</p>
+        <input type="text" formControlName="cityName"> 
+      </div>
+     
+  
+      <button  [disabled]="!agentForm.valid"
+      (click)="addUsers()"
+      id="save-button">Submit</button>
+    </div>
+  </form>
+  </div>
+  

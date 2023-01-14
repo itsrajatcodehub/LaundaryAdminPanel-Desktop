@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard.component';
 
 
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ComponentsModule } from 'src/app/components/components.module';
 @NgModule({
   declarations: [
     DashboardComponent
@@ -13,6 +14,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
   imports: [
     CommonModule,
     DashboardRoutingModule,
+    ComponentsModule,
     NgCircleProgressModule.forRoot({
       radius: 100,
       outerStrokeWidth: 16,

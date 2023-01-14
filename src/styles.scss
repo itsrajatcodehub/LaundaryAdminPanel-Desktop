@@ -11,6 +11,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    font-family: 'Lato';
   }
   
   body{
@@ -28,4 +30,35 @@
       background-color: #000;
       color: #fff;
     }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 4px 4px 0 0;
+  padding: 0;
+}
+.mat-paginator {
+  display: block;
+  border-radius: 1rem;
+}
+.mat-paginator-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 8px;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+  background: var(--color-secondary);
+  border-radius: 1rem;
+  // color: black;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex {
+
+  padding: 0;
+}
+.mat-tab-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  
 }

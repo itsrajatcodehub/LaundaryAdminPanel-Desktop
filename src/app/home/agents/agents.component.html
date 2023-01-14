@@ -1,0 +1,191 @@
+<div class="container">
+  <div class="header_bar">
+    <button class="refresh">
+      <i class="ri-refresh-line"></i>
+      Refresh
+    </button>
+    <button (click)="addNewUserDetails()">
+      <i class="ri-add-line"></i>
+      Add New User
+    </button>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Start Date</mat-label>
+      <input matInput [matDatepicker]="picker" />
+      <mat-datepicker-toggle matSuffix [for]="picker"> </mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>End Date</mat-label>
+      <input matInput [matDatepicker]="picker2" />
+      <mat-datepicker-toggle matSuffix [for]="picker2"> </mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div class="orderTable">
+    <button class="uk-button uk-button-default" type="button" id="report">
+      <i class="ri-sort-asc"></i>
+      Sort By
+    </button>
+    <div uk-dropdown>
+      <ul class="uk-nav uk-dropdown-nav">
+        <li >UserName</li>
+        <li>Order</li>
+        <li>Weight</li>
+       
+      </ul>
+    </div>
+
+    <table>
+      <thead>
+        
+        <tr>
+          <th width="10%">User Name</th>
+          <th width="15%">Email</th>
+          <th width="10%">Phone</th>
+          <th width="10%">Total Orders</th>
+          <th width="10%">Total Weight</th>
+          <th width="15%">Change Access Level</th>
+          <th width="10%">View Order</th>
+          <th width="10%">Action</th>
+        </tr>
+        
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let user of filteredUsers" [routerLink]="user.id">
+          <td width="10%" data-label="Customer Name">{{ user.name }}</td>
+          <td width="15%" data-label="Email">{{ user.email }}</td>
+          <td width="10%" data-label="Phone">
+            <button>{{ user.phoneNumber ? user.phoneNumber : "N/A" }}</button>
+          </td>
+          <td width="10%" data-label="Total Order">
+            <button class="date">{{ user.tottalOrders ? user.tottalOrders : "N/A" }}</button>
+          </td>
+          <td width="10%" data-label="Total Weight">
+            <button class="date">34</button>
+          </td>
+          <td width="15%" data-label="Change Access Level">
+            <select class="access">
+              <option>Admin</option>
+              <option>Agent</option>
+              <option>Customer</option>
+            </select>
+          </td>
+         
+          <td width="10%" data-label="View Order">
+            <button>
+                Delivered
+            </button>
+        </td>
+          <td width="10%" data-label="Action">
+            <i
+            class="ri-pencil-line"
+            style="
+            color: rgb(88, 88, 88);
+              cursor: pointer;
+              margin: 0 0.3rem;
+              font-size: 1.5rem;
+              "
+              (click)="editUserDetails()"
+              ></i>
+              <i
+            class="ri-delete-bin-5-line"
+            style="
+            color: red;
+            cursor: pointer;
+            margin: 0 0.3rem;
+              font-size: 1.5rem;
+              "
+            uk-toggle="target: #deleteUser"
+            ></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <mat-paginator
+        [length]="totalUsers"
+        [pageSize]="pageSize"
+        [pageSizeOptions]="[10, 20, 30, 40, 50, 100, 500]"
+        (page)="getUsers($event)"
+        aria-label="Select page"
+        #paginator
+      >
+      </mat-paginator>
+    </div>
+  </div>
+</div>
+
+<div id="newUser" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+    <i class="ri-close-circle-line" uk-toggle="target: #newUser"></i>
+    <b class="modal-header" *ngIf="!editUser">Add New User </b>
+    <b class="modal-header" *ngIf="editUser">Edit User </b>
+    <form class="userForm" [formGroup]="userForm" (ngSubmit)="submit()">
+      <div class="user">
+        <img
+          src="assets/user404.jpg"
+          alt=""
+          id="user-photo"
+          (click)="selectFile.click()"
+          height="100%"
+          width="100%"
+        />
+        <button class="cam">
+          <i class="ri-camera-3-line"></i>
+        </button>
+        <input
+          type="file"
+          (change)="validatePhotos($event)"
+          style="display: none"
+          #selectFile
+        />
+      </div>
+
+      <input placeholder="Full Name" formControlName="name" />
+      <input placeholder="Email" formControlName="email" />
+      <input placeholder="PinCode" formControlName="pinCode" />
+      <input placeholder="Phone No" formControlName="phone" />
+      <input placeholder="D.O.B" formControlName="dob" />
+      <input placeholder="Alternative Phone No" formControlName="altPhone" />
+      <input placeholder="Landmark" formControlName="landMark" />
+      <select placeholder="Country">
+        <label for="country">country</label>
+        <option *ngFor="let state of states">{{ state }}</option>
+      </select>
+      <!-- <input placeholder="Country" formControlName="countryName" /> -->
+      <input placeholder="State" formControlName="stateName" />
+      <input placeholder="City" formControlName="cityName" />
+      <textarea
+        placeholder="Address"
+        formControlName="address"
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+      ></textarea>
+      <button *ngIf="editUser" type="submit" [disabled]="!userForm.valid">
+        Update User
+      </button>
+
+      <button *ngIf="!editUser" [disabled]="!userForm.valid" type="submit">
+        Add User
+      </button>
+    </form>
+  </div>
+</div>
+<div id="deleteUser" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+    <p>
+      <i class="ri-delete-bin-6-line" style="font-size: 1rem; color: red"></i
+      >Are you sure You Want To delete User ?
+    </p>
+    <div class="buttons">
+      <button>Confirm</button>
+      <button uk-toggle="target: #deleteUser">Delete</button>
+    </div>
+  </div>
+</div>

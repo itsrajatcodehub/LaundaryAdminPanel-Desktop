@@ -2,20 +2,21 @@
   <div class="card">
     <img src="assets/mainIcon.png" class="logo" />
     <p class="text1">Sign In</p>
-    <form class="signup_Form">
+    <form class="sign_in_Form"[formGroup]="loginForm" (ngSubmit)="loginWithEmail()">
       <div class="form_box">
         <label>Email Address</label>
-        <input placeholder="create@shreeva.com" />
+        <input placeholder="create@shreeva.com" type="email" formControlName="email" />
       </div>
       <div class="form_box">
         <label>Password</label>
-        <input type="password" />
+        <input type="password" type="password"  formControlName="password" />
       </div>
+     
       <p class="forgot">Forget Password?</p>
 
 
-      <button class="signUpButton" routerLink="/home"  >Sign In</button>
-      <!-- <p>Don't Have a account? <b> Sign Up</b></p> -->
+      <button class="signUpButton"   type="submit" >Sign In</button>
+      <p >Don't Have a account? <b style="cursor: pointer;"  routerLink="../signup" > Sign Up</b></p>
     </form>
   </div>
 </div>

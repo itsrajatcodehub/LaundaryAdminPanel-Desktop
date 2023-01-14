@@ -66,8 +66,31 @@
         }
         i{
             font-size: 1.2rem;
-            color: red;
+          
             font-weight: 600;
         }
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 1rem;
+            b{
+                font-size: 0.8rem;
+            }
+            strong{
+                font-size: 0.6rem;
+            }
+            p{
+                font-size: 0.6rem;
+            }
+            i{
+                margin: 0 .5rem;
+                font-size: 1rem;
+            }
+        
+            
+        }
+    }
+    @media screen and (max-width: 768px) {
+
+        margin: 5rem 0;        
     }
   }
