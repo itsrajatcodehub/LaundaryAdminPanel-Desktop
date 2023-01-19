@@ -55,14 +55,14 @@
       </thead>
       <tbody>
 
-        <tr *ngFor="let user of filteredUsers" [routerLink]="user.id">
+        <tr *ngFor="let user of filteredUsers">
           <td width="10%" data-label="Customer Name">{{ user.name }}</td>
           <td width="15%" data-label="Email">{{ user.email }}</td>
           <td width="10%" data-label="Phone">
-            <button>{{ user.phoneNumber ? user.phoneNumber : "N/A" }}</button>
+            <button>{{ user.phone  ? user.phone : "N/A" }}</button>
           </td>
           <td width="10%" data-label="Total Order">
-            <button class="date">{{ user.tottalOrders ? user.tottalOrders : "N/A" }}</button>
+            <button class="date">{{ user.totalOrders ? user.totalOrders : "N/A" }}</button>
           </td>
           <td width="10%" data-label="Total Weight">
             <button class="date">34</button>
