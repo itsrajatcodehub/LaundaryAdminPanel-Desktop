@@ -43,6 +43,32 @@ const routes: Routes = [
           import('./notification/notification.module').then(
             (m) => m.NotificationModule
           ),
+      },{
+        path: 'settings',
+        loadChildren: () =>
+          import('./settings/settings.module').then(
+            (m) => m.SettingsModule
+          ),
+      },
+      {
+        path: 'delivery',
+        loadChildren: () =>
+          import('./deleivery/deleivery.module').then(
+            (m) => m.DeleiveryModule
+          ),
+      },
+      {
+        path: 'process',
+        loadChildren: () =>
+          import('./in-progress/in-progress.module').then(
+            (m) => m.InProgressModule  
+          ),
+      },{
+        path: 'pickUp',
+        loadChildren: () =>
+          import('./pickup/pickup.module').then(
+            (m) => m.PickupModule 
+          ),
       }
     ],
   },

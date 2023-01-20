@@ -77,7 +77,62 @@
                 <span class="sidebar-text">Dashboard</span></a
               >
             </li> 
-             
+            <li class="sidebar-li">
+              <a
+                routerLink="/home/pickUp"
+                routerLinkActive="active"
+                (click)="toggleSidebar()"
+                class="sidebar-li-a"
+                >
+                <i class="fa-solid fa-truck"></i>
+                <span class="sidebar-text">Pick Up</span></a
+              >
+            </li> 
+            <li class="sidebar-li">
+              <a
+                routerLink="/home/process"
+                routerLinkActive="active"
+                (click)="toggleSidebar()"
+                class="sidebar-li-a"
+                >
+                <i class="fa-solid fa-spinner"></i>
+                <span class="sidebar-text">In Progress</span></a
+              >
+            </li> 
+   
+            <li class="sidebar-li">
+              <a
+                routerLink="/home/delivery"
+                routerLinkActive="active"
+                (click)="toggleSidebar()"
+                class="sidebar-li-a"
+                >
+                <i class="fa-solid fa-truck"></i>
+                <span class="sidebar-text">Delivery</span></a
+                >
+              </li> 
+              <li class="sidebar-li">
+                <a
+                  routerLink="/home/users"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="ri-user-fill"></i>
+                <span class="sidebar-text">Customers</span></a
+                >
+              </li>
+              <li class="sidebar-li">
+                <a
+                  routerLink="/home/agents"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="fa-solid fa-user-gear"></i>
+                  <span class="sidebar-text">Agents</span></a
+                >
+              </li> 
             <li class="sidebar-li">
               <a
                 routerLink="/home/orders"
@@ -85,7 +140,7 @@
                 (click)="toggleSidebar()"
                 class="sidebar-li-a"
                 ><i class="ri-archive-line"></i>
-                <span class="sidebar-text">Orders</span></a
+                <span class="sidebar-text">Ledger</span></a
               >
             </li>
             <li class="sidebar-li">
@@ -101,24 +156,13 @@
             </li> 
             <li class="sidebar-li">
               <a
-                routerLink="/home/users"
+                routerLink="/home/settings"
                 routerLinkActive="active"
                 (click)="toggleSidebar()"
                 class="sidebar-li-a"
                 >
-                <i class="ri-user-line"></i>
-              <span class="sidebar-text">User</span></a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a
-                routerLink="/home/agents"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                >
-                <i class="ri-shield-user-line"></i>
-                <span class="sidebar-text">Agents</span></a
+                <i class="ri-settings-3-fill"></i>
+                <span class="sidebar-text">Settings</span></a
               >
             </li> 
    
