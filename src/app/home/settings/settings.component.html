@@ -1,6 +1,32 @@
 <mat-tab-group>
     <mat-tab label="Content Management">
         <!-- banner management -->
+        <h4>Banner Management</h4>
+        <div class="banners">
+            <div class="banner" *ngFor="let banner of banners">
+                <!-- interface Banner {
+                    id: string;
+                    enabled: boolean;
+                    title: string;
+                    bannerUrlType:'url'|'inApp';
+                    bannerUrl: string;
+                    bannerImage: string;
+                    startDate: Date;
+                    endDate: Date;
+                } -->
+                <img [src]="banner.bannerImage">
+                <div class="details">
+                    <div class="title">
+                        <p>Title:  {{banner.title}}</p>
+                        <div class="actions">
+                            <mat-slide-toggle [checked]="banner.enabled"></mat-slide-toggle>
+                            <button mat-icon-button color="warn"> <mat-icon>delete</mat-icon></button>
+                            <button mat-icon-button color="primary"> <mat-icon>edit</mat-icon></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- contact management -->
         <!-- cancellation reasons manager -->
     </mat-tab>

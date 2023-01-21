@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
-import { PageEvent } from '@angular/material/paginator';
+import { LegacyPageEvent as PageEvent } from '@angular/material/legacy-paginator';
 import { Router } from '@angular/router';
 import { DataProvider } from 'src/app/providers/data.provider';
 import { AlertsAndNotificationsService } from 'src/app/services/alerts-and-notifications.service';

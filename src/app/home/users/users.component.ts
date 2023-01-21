@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataProvider } from 'src/app/providers/data.provider';
 import { AlertsAndNotificationsService } from 'src/app/services/alerts-and-notifications.service';
 import { DatabaseService } from 'src/app/services/database.service';
-import { PageEvent } from '@angular/material/paginator';
+import { LegacyPageEvent as PageEvent } from '@angular/material/legacy-paginator';
 import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Timestamp } from '@angular/fire/firestore';
 import { UserData } from 'src/app/structures/user.structure';

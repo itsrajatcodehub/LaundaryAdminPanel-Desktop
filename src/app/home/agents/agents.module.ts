@@ -3,22 +3,24 @@ import { CommonModule } from '@angular/common';
 
 import { AgentsRoutingModule } from './agents-routing.module';
 import { AgentsComponent } from './agents.component';
-import { MatButtonModule } from 
-    '@angular/material/button';
+import { MatLegacyButtonModule as MatButtonModule } from 
+    '@angular/material/legacy-button';
 import { MatButtonToggleModule } from 
     '@angular/material/button-toggle';
 import { MatDatepickerModule } from 
     '@angular/material/datepicker';
-import { MatInputModule } from 
-    '@angular/material/input';
-import { MatFormFieldModule } from 
-    '@angular/material/form-field';
-import { MatNativeDateModule, MatOptionModule } from 
+import { MatLegacyInputModule as MatInputModule } from 
+    '@angular/material/legacy-input';
+import { MatLegacyFormFieldModule as MatFormFieldModule } from 
+    '@angular/material/legacy-form-field';
+import { MatNativeDateModule } from 
     '@angular/material/core';
+import { MatLegacyOptionModule as MatOptionModule } from 
+    '@angular/material/legacy-core';
 
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatLegacyPaginatorModule as MatPaginatorModule } from '@angular/material/legacy-paginator';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatSelectModule } from '@angular/material/select';
+import { MatLegacySelectModule as MatSelectModule } from '@angular/material/legacy-select';
 import { AgentComponent } from './agent/agent.component';
 
 @NgModule({

@@ -25,6 +25,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
 import {MatSliderModule} from '@angular/material/slider'; 
 import {MatSlideToggleModule} from '@angular/material/slide-toggle'; 
+import {DialogModule} from '@angular/cdk/dialog'; 
+
 @NgModule({
   declarations: [
     SettingsComponent
@@ -56,6 +58,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatSelectModule,
     MatSlideToggleModule,
     MatTooltipModule,
+    DialogModule,
   ]
 })
 export class SettingsModule { }

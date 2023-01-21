@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ReportRoutingModule } from './report-routing.module';
 import { ReportComponent } from './report.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import {MatLegacyTabsModule as MatTabsModule} from '@angular/material/legacy-tabs';
 
 
 @NgModule({
