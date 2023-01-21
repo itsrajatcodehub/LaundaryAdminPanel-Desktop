@@ -1,13 +1,11 @@
 <main>
-  
   <header>
-      
     <button
-        *ngIf="!largeScreen"
-        class="uk-navbar-toggle"
-        id="toggle-button"
-        (click)="toggleSidebar()"
-      >
+      *ngIf="!largeScreen"
+      class="uk-navbar-toggle"
+      id="toggle-button"
+      (click)="toggleSidebar()"
+    >
       <i class="ri-menu-3-fill"></i>
     </button>
     <div class="logo_cont">
@@ -20,7 +18,7 @@
       </b>
       <br />
 
-     {{date}} 
+      {{ date }}
     </div>
     <div class="uk-margin search11">
       <form class="uk-search uk-search-default">
@@ -30,147 +28,137 @@
           type="search"
           placeholder="Search Anything here..."
           aria-label="Search"
-          
         />
       </form>
     </div>
     <div class="user">
-      <button class="userdata" >
-
+      <button class="userdata">
         <img
-        src="https://i.pravatar.cc/300"
-        alt=""
-        routerLink="../admin/profile"
+          src="https://i.pravatar.cc/300"
+          alt=""
+          routerLink="../admin/profile"
         />
 
-        <b class="name">{{dataProvider?.userData?.name || "Madan"}} </b>
+        <b class="name">{{ dataProvider?.userData?.name || "Madan" }} </b>
       </button>
       <button class="notificationbtn">
-
-        <i class="ri-notification-3-line" 
-        routerLink="/home/notification" ></i>
+        <i class="ri-notification-3-line" routerLink="/admin/notification"></i>
       </button>
     </div>
-
   </header>
-  
+
   <div id="overlay" (click)="showSidebar && toggleSidebar()"></div>
-  
 </main>
 <div id="wrapper" (window:resize)="onWindowResize()">
-  
-      <div
-        [style]="largeScreen || showSidebar ? '' : 'display: none'"
-        id="sidebar-container"
-      >
-        <aside id="sidebar">
-      
-          <ul id="sidebar-ul">
-            <li class="sidebar-li">
-              <a
-                routerLink="/home/dashboard"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                >
-                <i class="ri-dashboard-2-line"></i>
-                <span class="sidebar-text">Dashboard</span></a
-              >
-            </li> 
-            <li class="sidebar-li">
-              <a
-                routerLink="/home/pickUp"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                >
-                <i class="fa-solid fa-truck"></i>
-                <span class="sidebar-text">Pick Up</span></a
-              >
-            </li> 
-            <li class="sidebar-li">
-              <a
-                routerLink="/home/process"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                >
-                <i class="fa-solid fa-spinner"></i>
-                <span class="sidebar-text">In Progress</span></a
-              >
-            </li> 
-   
-            <li class="sidebar-li">
-              <a
-                routerLink="/home/delivery"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                >
-                <i class="fa-solid fa-truck"></i>
-                <span class="sidebar-text">Delivery</span></a
-                >
-              </li> 
-              <li class="sidebar-li">
-                <a
-                  routerLink="/home/users"
-                  routerLinkActive="active"
-                  (click)="toggleSidebar()"
-                  class="sidebar-li-a"
-                  >
-                  <i class="ri-user-fill"></i>
-                <span class="sidebar-text">Customers</span></a
-                >
-              </li>
-              <li class="sidebar-li">
-                <a
-                  routerLink="/home/agents"
-                  routerLinkActive="active"
-                  (click)="toggleSidebar()"
-                  class="sidebar-li-a"
-                  >
-                  <i class="fa-solid fa-user-gear"></i>
-                  <span class="sidebar-text">Agents</span></a
-                >
-              </li> 
-            <li class="sidebar-li">
-              <a
-                routerLink="/home/orders"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                ><i class="ri-archive-line"></i>
-                <span class="sidebar-text">Ledger</span></a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a
-                routerLink="/home/report"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                >
-                <i class="ri-file-text-line"></i>
-                <span class="sidebar-text">Report</span></a
-              >
-            </li> 
-            <li class="sidebar-li">
-              <a
-                routerLink="/home/settings"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                >
-                <i class="ri-settings-3-fill"></i>
-                <span class="sidebar-text">Settings</span></a
-              >
-            </li> 
-   
-          </ul>
-        </aside>
-      </div>
-      <div id="container">
-        <router-outlet></router-outlet>
-      </div>
+  <div
+    [style]="largeScreen || showSidebar ? '' : 'display: none'"
+    id="sidebar-container"
+  >
+    <aside id="sidebar">
+      <ul id="sidebar-ul">
+        <li class="sidebar-li">
+          <a
+            routerLink="/admin/dashboard"
+            routerLinkActive="active"
+            (click)="toggleSidebar()"
+            class="sidebar-li-a"
+          >
+            <i class="ri-dashboard-2-line"></i>
+            <span class="sidebar-text">Dashboard</span></a
+          >
+        </li>
+        <li class="sidebar-li">
+          <a
+            routerLink="/admin/pickUp"
+            routerLinkActive="active"
+            (click)="toggleSidebar()"
+            class="sidebar-li-a"
+          >
+            <i class="fa-solid fa-truck"></i>
+            <span class="sidebar-text">Pick Up</span></a
+          >
+        </li>
+        <li class="sidebar-li">
+          <a
+            routerLink="/admin/process"
+            routerLinkActive="active"
+            (click)="toggleSidebar()"
+            class="sidebar-li-a"
+          >
+            <i class="fa-solid fa-spinner"></i>
+            <span class="sidebar-text">In Progress</span></a
+          >
+        </li>
+
+        <li class="sidebar-li">
+          <a
+            routerLink="/admin/delivery"
+            routerLinkActive="active"
+            (click)="toggleSidebar()"
+            class="sidebar-li-a"
+          >
+            <i class="fa-solid fa-truck"></i>
+            <span class="sidebar-text">Delivery</span></a
+          >
+        </li>
+        <li class="sidebar-li">
+          <a
+            routerLink="/admin/users"
+            routerLinkActive="active"
+            (click)="toggleSidebar()"
+            class="sidebar-li-a"
+          >
+            <i class="ri-user-fill"></i>
+            <span class="sidebar-text">Customers</span></a
+          >
+        </li>
+        <li class="sidebar-li">
+          <a
+            routerLink="/admin/agents"
+            routerLinkActive="active"
+            (click)="toggleSidebar()"
+            class="sidebar-li-a"
+          >
+            <i class="fa-solid fa-user-gear"></i>
+            <span class="sidebar-text">Agents</span></a
+          >
+        </li>
+        <li class="sidebar-li">
+          <a
+            routerLink="/admin/orders"
+            routerLinkActive="active"
+            (click)="toggleSidebar()"
+            class="sidebar-li-a"
+            ><i class="ri-archive-line"></i>
+            <span class="sidebar-text">Ledger</span></a
+          >
+        </li>
+        <li class="sidebar-li">
+          <a
+            routerLink="/admin/report"
+            routerLinkActive="active"
+            (click)="toggleSidebar()"
+            class="sidebar-li-a"
+          >
+            <i class="ri-file-text-line"></i>
+            <span class="sidebar-text">Report</span></a
+          >
+        </li>
+        <li class="sidebar-li">
+          <a
+            routerLink="/admin/settings"
+            routerLinkActive="active"
+            (click)="toggleSidebar()"
+            class="sidebar-li-a"
+          >
+            <i class="ri-settings-3-fill"></i>
+            <span class="sidebar-text">Settings</span></a
+          >
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <div id="container">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-  

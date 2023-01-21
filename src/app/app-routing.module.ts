@@ -3,12 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'admin',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'admin',
     pathMatch: 'full',
   },
   {
@@ -20,31 +20,7 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () =>
       import('./login/login.module').then((m) => m.LoginModule),
-  },
-  {
-    path: 'home/dashboard',
-    loadChildren: () =>
-      import('./home/dashboard/dashboard.module').then(
-        (m) => m.DashboardModule
-      ),
-  },
-  {
-    path: 'home/notification',
-    loadChildren: () =>
-      import('./home/notification/notification.module').then(
-        (m) => m.NotificationModule
-      ),
-  },
-  {
-    path: 'home/orders',
-    loadChildren: () =>
-      import('./home/orders/orders.module').then((m) => m.OrdersModule),
-  },
-  {
-    path: 'home/users',
-    loadChildren: () =>
-      import('./home/users/users.module').then((m) => m.UsersModule),
-  },
+  }
 ];
 
 @NgModule({

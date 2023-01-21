@@ -1,38 +1,102 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
 
- 
-    :root{
-      --color-primary: #0A4A28;
-      --color-secondary: #579540;
-      --color-tertiary: #FFFFFF;
-      --color-quaternary: #EFFFEA;
-      --color-quinary: #000000;
-  }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-    font-family: 'Lato';
-  }
-  
-  body{
-    font-family: 'Lato', sans-serif;
-    background-color: var(--primary);
-    color: var(--tertiary);
-  }
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
 
-  .uk-dropdown[_ngcontent-pop-c18] ul[_ngcontent-pop-c18] {
-    width: 7rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    &::hover {
-      background-color: #000;
-      color: #fff;
-    }
+$urbanlaundry-palette: (
+  50: #579540,
+  100: #579540,
+  200: #579540,
+  300: #579540,
+  400: #579540,
+  500: #579540,
+  600: #579540,
+  700: #579540,
+  800: #579540,
+  900: #579540,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+$my-primary: mat.define-palette($urbanlaundry-palette, 700);
+$my-accent: mat.define-palette(mat.$cyan-palette, A200, A100, A400);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      foreground: $urbanlaundry-palette,
+    ),
+  )
+);
+@include mat.core-theme($my-theme);
+@include mat.button-theme($my-theme);
+@include mat.tabs-theme($my-theme);
+@include mat.input-theme($my-theme);
+@include mat.form-field-theme($my-theme);
+@include mat.progress-spinner-theme($my-theme);
+@include mat.checkbox-color($my-theme);
+@include mat.datepicker-theme($my-theme);
+@include mat.datepicker-color($my-theme);
+@include mat.all-component-themes($my-theme);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+
+:root {
+  --color-primary: #0a4a28;
+  --color-secondary: #579540;
+  --color-tertiary: #ffffff;
+  --color-quaternary: #efffea;
+  --color-quinary: #000000;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Lato";
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--primary);
+  color: var(--tertiary);
+}
+
+.uk-dropdown[_ngcontent-pop-c18] ul[_ngcontent-pop-c18] {
+  width: 7rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  &::hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 .mat-form-field-appearance-fill .mat-form-field-flex {
   border-radius: 4px 4px 0 0;
   padding: 0;
@@ -53,12 +117,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   // color: black;
 }
 .mat-form-field-appearance-fill .mat-form-field-flex {
-
   padding: 0;
 }
 .mat-tab-label {
   font-size: 1rem;
   font-weight: 500;
   color: var(--color-primary);
-  
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
