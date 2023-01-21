@@ -1,49 +1,349 @@
 <mat-tab-group>
-    <mat-tab label="Content Management">
-        <!-- banner management -->
-        <h4>Banner Management</h4>
-        <div class="banners">
-            <div class="banner" *ngFor="let banner of banners">
-                <!-- interface Banner {
-                    id: string;
-                    enabled: boolean;
-                    title: string;
-                    bannerUrlType:'url'|'inApp';
-                    bannerUrl: string;
-                    bannerImage: string;
-                    startDate: Date;
-                    endDate: Date;
-                } -->
-                <img [src]="banner.bannerImage">
-                <div class="details">
-                    <div class="title">
-                        <p>Title:  {{banner.title}}</p>
-                        <div class="actions">
-                            <mat-slide-toggle [checked]="banner.enabled"></mat-slide-toggle>
-                            <button mat-icon-button color="warn"> <mat-icon>delete</mat-icon></button>
-                            <button mat-icon-button color="primary"> <mat-icon>edit</mat-icon></button>
-                        </div>
-                    </div>
-                </div>
+  <mat-tab label="Content Management">
+    <section>
+      <!-- banner management -->
+      <h4>Banner Management</h4>
+      <div class="banners">
+        <div class="banner" *ngFor="let banner of banners">
+          <img [src]="banner.bannerImage" />
+          <div class="details">
+            <div class="fullWidth">
+              <p>
+                Title: <strong>{{ banner.title }}</strong>
+              </p>
+              <div class="actions">
+                <mat-slide-toggle
+                  color="primary"
+                  [checked]="banner.enabled"
+                ></mat-slide-toggle>
+                <button mat-icon-button color="warn">
+                  <mat-icon>delete</mat-icon>
+                </button>
+                <button mat-icon-button color="primary">
+                  <mat-icon>edit</mat-icon>
+                </button>
+              </div>
             </div>
+            <p class="fullWidth">
+              Banner Url: <strong>{{ banner.bannerUrl }}</strong>
+            </p>
+            <p>
+              Start: <strong>{{ banner.startDate.toDate() | date }}</strong>
+            </p>
+            <p>
+              End: <strong>{{ banner.endDate.toDate() | date }}</strong>
+            </p>
+          </div>
         </div>
-        <!-- contact management -->
-        <!-- cancellation reasons manager -->
-    </mat-tab>
-    <mat-tab label="Services">
-        <!-- service management -->
-        <!-- cloth management -->
-        <!-- area management -->
-    </mat-tab>
-    <mat-tab label="Date & Time">
-        <!-- opening and closing hours -->
-        <!-- holiday management -->
-    </mat-tab>
-    <mat-tab label="Billing">
-        <!-- billing additional charges -->
-    </mat-tab>
-    <mat-tab label="Policies">
-        <!-- terms & conditions -->
-        <!-- privacy policy -->
-    </mat-tab>
+        <div class="banner addNew" (click)="addNewBanner()">
+          <mat-icon>add</mat-icon>
+          <p>Select a file to upload.</p>
+        </div>
+      </div>
+      <hr />
+      <!-- contact management -->
+      <h4>Contact Management</h4>
+      <form [formGroup]="contactForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input
+            matInput
+            formControlName="phone"
+            placeholder="Phone"
+            type="email"
+            name="email"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Whatsapp Number</mat-label>
+          <input
+            matInput
+            formControlName="whatsapp"
+            placeholder="Whatsapp"
+            type="email"
+            name="email"
+          />
+        </mat-form-field>
+        <div class="row">
+          <button color="primary" mat-stroked-button>Cancel</button>
+          <button color="primary" mat-flat-button>Save</button>
+        </div>
+      </form>
+      <hr />
+      <!-- cancellation reasons manager -->
+      <h4>Cancellation Reasons</h4>
+      <div class="list">
+        <mat-card *ngFor="let reason of reasons">
+          <strong>{{ reason.title }}</strong>
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="deleteReason(reason.id || '')"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card>
+      </div>
+    </section>
+  </mat-tab>
+  <mat-tab label="Services">
+    <section>
+      <!-- service management -->
+      <h4>
+        Service Management
+        <button mat-flat-button color="primary" (click)="addNewService()">
+          Add Service
+        </button>
+      </h4>
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let service of services">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ service.title }}
+            </mat-panel-title>
+            <mat-panel-description>
+              Service is {{ service.enabled ? "enabled" : "disabled" }}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <img [src]="service.image" />
+            <table class="uk-table uk-table-divider">
+              <thead>
+                <tr>
+                  <th>Cloth</th>
+                  <th>Price</th>
+                  <th>Icon</th>
+                  <th>
+                    <button
+                      color="primary"
+                      mat-flat-button
+                      (click)="addClothesToService(service)"
+                    >
+                      Add Clothes
+                    </button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let cloth of service.clothes">
+                  <ng-container *ngIf="cloth.mode == 'add'">
+                    <td>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Select Cloth</mat-label>
+                        <mat-select
+                          [ngModelOptions]="{ standalone: true }"
+                          placeholder="Placeholder"
+                          [(ngModel)]="cloth.title"
+                        >
+                          <mat-option
+                            *ngFor="let item of clothes"
+                            [value]="item.title"
+                          >
+                            {{ item.title }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </td>
+                    <td>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Select Icon</mat-label>
+                        <mat-select
+                          placeholder="Placeholder"
+                          [(ngModel)]="cloth.icon"
+                        >
+                          <mat-option
+                            *ngFor="let item of icons"
+                            [value]="item.name"
+                          >
+                            <mat-icon>{{ item.name }}</mat-icon>
+                            <p>{{ item.name }}</p>
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </td>
+                    <td>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Price</mat-label>
+                        <input
+                          matInput
+                          [ngModelOptions]="{ standalone: true }"
+                          [(ngModel)]="cloth.cost"
+                          placeholder="Price"
+                          type="number"
+                        />
+                      </mat-form-field>
+                    </td>
+                    <td>
+                      <button
+                        mat-flat-button
+                        color="primary"
+                        (click)="cloth.mode = 'read'"
+                      >
+                        Submit
+                      </button>
+                    </td>
+                  </ng-container>
+
+                  <ng-container *ngIf="cloth.mode == 'edit'">
+                    <mat-select
+                      placeholder="Placeholder"
+                      [(ngModel)]="cloth.title"
+                      name="item"
+                    >
+                      <mat-option
+                        *ngFor="let item of clothes"
+                        [value]="item.title"
+                      >
+                        {{ item.title }}
+                      </mat-option>
+                    </mat-select>
+                    <mat-select
+                      placeholder="Placeholder"
+                      [(ngModel)]="cloth.title"
+                      name="item"
+                    >
+                      <mat-option *ngFor="let item of icons" [value]="item">
+                        <mat-icon>{{ item.name }}</mat-icon>
+                        <p>{{ item.name }}</p>
+                      </mat-option>
+                    </mat-select>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Price</mat-label>
+                      <input
+                        matInput
+                        [(ngModel)]="cloth.cost"
+                        placeholder="Price"
+                        type="number"
+                      />
+                    </mat-form-field>
+                  </ng-container>
+                  <ng-container *ngIf="cloth.mode == 'read'">
+                    <td>{{ cloth.title }}</td>
+                    <td>{{ cloth.cost }}</td>
+                    <td>
+                      <mat-icon>{{ cloth.icon }}</mat-icon>
+                    </td>
+                  </ng-container>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </mat-expansion-panel>
+        <div class="actions">
+          <button mat-flat-button color="primary" (click)="saveServices()">
+            Save
+          </button>
+        </div>
+      </mat-accordion>
+      <hr />
+      <!-- cloth management -->
+      <h4>Cloth Management</h4>
+      <div class="list">
+        <mat-card *ngFor="let cloth of clothes">
+          <strong>{{ cloth.title }}</strong>
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="deleteCloth(cloth.id || '')"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card>
+        <div *ngIf="clothes.length > 0">
+          <button mat-flat-button color="primary" (click)="addClothes()">
+            <mat-icon>add</mat-icon> Add More
+          </button>
+        </div>
+        <p *ngIf="clothes.length == 0">
+          No Clothes Found Add Now
+          <button mat-flat-button color="primary" (click)="addClothes()">
+            <mat-icon>add</mat-icon> Add
+          </button>
+        </p>
+      </div>
+      <hr />
+      <!-- area management -->
+      <h4>Area Management</h4>
+      <div class="list">
+        <mat-card *ngFor="let area of areas">
+          <strong>{{ area.title }}</strong>
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="deleteArea(area.id || '')"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card>
+        <div *ngIf="clothes.length > 0">
+          <button mat-flat-button color="primary" (click)="addAreas()">
+            <mat-icon>add</mat-icon> Add More Area
+          </button>
+        </div>
+        <p *ngIf="clothes.length == 0">
+          No Areas Found Add Now
+          <button mat-flat-button color="primary" (click)="addAreas()">
+            <mat-icon>add</mat-icon> Add
+          </button>
+        </p>
+      </div>
+    </section>
+  </mat-tab>
+  <mat-tab label="Date & Time">
+    <section>
+      <!-- opening and closing hours -->
+      <div class="row">
+        <h4>Time Slot Management</h4>
+        <button mat-stroked-button color="primary" (click)="addNewSlot()">
+          <mat-icon>add</mat-icon> Add Slot</button
+        >&nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-flat-button color="primary">Save</button>
+      </div>
+      <div class="list">
+        <div class="timeManagement" *ngFor="let slot of slots">
+            <div class="block">
+              <p>Day:</p>
+              <mat-form-field appearance="outline">
+                <mat-label>Select Day</mat-label>
+                <mat-select placeholder="Select Time" [(ngModel)]="slot.startTime">
+                  <mat-option *ngFor="let item of days" [value]="item">
+                    {{ item }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="block">
+              <p>Starting Time:</p>
+              <mat-form-field appearance="outline">
+                <mat-label>Select Time</mat-label>
+                <mat-select placeholder="Select Time" [(ngModel)]="slot.startTime">
+                  <mat-option *ngFor="let item of time" [value]="item">
+                    {{ item | date : "shortTime" }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="block">
+              <p>Ending Time:</p>
+              <mat-form-field appearance="outline">
+                <mat-label>Select Time</mat-label>
+                <mat-select placeholder="Select Time" [(ngModel)]="slot.endTime">
+                  <mat-option *ngFor="let item of time" [value]="item">
+                    {{ item | date : "shortTime" }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+      </div>
+      <!-- holiday management -->
+    </section>
+  </mat-tab>
+  <mat-tab label="Billing">
+    <!-- billing additional charges -->
+  </mat-tab>
+  <mat-tab label="Policies">
+    <!-- terms & conditions -->
+    <!-- privacy policy -->
+  </mat-tab>
 </mat-tab-group>

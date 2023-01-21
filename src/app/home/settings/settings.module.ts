@@ -25,11 +25,18 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
 import {MatSliderModule} from '@angular/material/slider'; 
 import {MatSlideToggleModule} from '@angular/material/slide-toggle'; 
-import {DialogModule} from '@angular/cdk/dialog'; 
+import {DialogModule} from '@angular/cdk/dialog';
+import { AddNewBannerComponent } from './add-new-banner/add-new-banner.component'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card'; 
+import {MatTableModule} from '@angular/material/table';
+import { AddNewClothComponent } from './add-new-cloth/add-new-cloth.component'; 
 
 @NgModule({
   declarations: [
-    SettingsComponent
+    SettingsComponent,
+    AddNewBannerComponent,
+    AddNewClothComponent
   ],
   imports: [
     CommonModule,
@@ -59,6 +66,10 @@ import {DialogModule} from '@angular/cdk/dialog';
     MatSlideToggleModule,
     MatTooltipModule,
     DialogModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatTableModule
   ]
 })
 export class SettingsModule { }
