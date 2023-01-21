@@ -3,7 +3,7 @@ import { DataProvider } from 'src/app/providers/data.provider';
 import { AlertsAndNotificationsService } from 'src/app/services/alerts-and-notifications.service';
 import { DatabaseService } from 'src/app/services/database.service';
 import { PageEvent } from '@angular/material/paginator';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Timestamp } from '@angular/fire/firestore';
 import { UserData } from 'src/app/structures/user.structure';
 declare const UIkit: any;
@@ -67,19 +67,19 @@ export class UsersComponent implements OnInit {
   ];
   @ViewChild('paginator') paginator: any;
 
-  userForm: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    photoURL: new FormControl(''),
-    pinCode: new FormControl('', [Validators.required]),
-    dob: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required]),
-    phone: new FormControl('', [Validators.required]),
-    altPhone: new FormControl(''),
-    address: new FormControl('', [Validators.required]),
-    countryName: new FormControl('--select--', [Validators.required]),
-    landMark: new FormControl('', [Validators.required]),
-    cityName: new FormControl('--select--', [Validators.required]),
-    stateName: new FormControl('--select--', [Validators.required]),
+  userForm: UntypedFormGroup = new UntypedFormGroup({
+    name: new UntypedFormControl('', [Validators.required]),
+    photoURL: new UntypedFormControl(''),
+    pinCode: new UntypedFormControl('', [Validators.required]),
+    dob: new UntypedFormControl('', [Validators.required]),
+    email: new UntypedFormControl('', [Validators.required]),
+    phone: new UntypedFormControl('', [Validators.required]),
+    altPhone: new UntypedFormControl(''),
+    address: new UntypedFormControl('', [Validators.required]),
+    countryName: new UntypedFormControl('--select--', [Validators.required]),
+    landMark: new UntypedFormControl('', [Validators.required]),
+    cityName: new UntypedFormControl('--select--', [Validators.required]),
+    stateName: new UntypedFormControl('--select--', [Validators.required]),
    
   });
   alertService: any;

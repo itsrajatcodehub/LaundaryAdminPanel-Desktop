@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Timestamp } from '@angular/fire/firestore';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataProvider } from 'src/app/providers/data.provider';
 import { AlertsAndNotificationsService } from 'src/app/services/alerts-and-notifications.service';
@@ -17,17 +17,17 @@ export class AgentComponent implements OnInit {
   @Input() userType = '';
 
   userToEdit: any;
-  agentForm: FormGroup = new FormGroup({
-    firstName: new FormControl('', [Validators.required]),
-    lastName: new FormControl('', [Validators.required]),
-    photoURL: new FormControl(''),
-    phoneNumber: new FormControl('',[Validators.required, Validators.pattern('[0-9]{10}')]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    countryName: new FormControl('', [Validators.required]),
-    cityName: new FormControl(''),
-    stateName: new FormControl(''),
-    dob: new FormControl(''),
-    address: new FormControl(''),
+  agentForm: UntypedFormGroup = new UntypedFormGroup({
+    firstName: new UntypedFormControl('', [Validators.required]),
+    lastName: new UntypedFormControl('', [Validators.required]),
+    photoURL: new UntypedFormControl(''),
+    phoneNumber: new UntypedFormControl('',[Validators.required, Validators.pattern('[0-9]{10}')]),
+    email: new UntypedFormControl('', [Validators.required, Validators.email]),
+    countryName: new UntypedFormControl('', [Validators.required]),
+    cityName: new UntypedFormControl(''),
+    stateName: new UntypedFormControl(''),
+    dob: new UntypedFormControl(''),
+    address: new UntypedFormControl(''),
   });
   constructor(   private dataProvider: DataProvider,
     private alertService: AlertsAndNotificationsService,
