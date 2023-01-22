@@ -301,49 +301,106 @@
       </div>
       <div class="list">
         <div class="timeManagement" *ngFor="let slot of slots">
-            <div class="block">
-              <p>Day:</p>
-              <mat-form-field appearance="outline">
-                <mat-label>Select Day</mat-label>
-                <mat-select placeholder="Select Time" [(ngModel)]="slot.startTime">
-                  <mat-option *ngFor="let item of days" [value]="item">
-                    {{ item }}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <div class="block">
-              <p>Starting Time:</p>
-              <mat-form-field appearance="outline">
-                <mat-label>Select Time</mat-label>
-                <mat-select placeholder="Select Time" [(ngModel)]="slot.startTime">
-                  <mat-option *ngFor="let item of time" [value]="item">
-                    {{ item | date : "shortTime" }}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-            <div class="block">
-              <p>Ending Time:</p>
-              <mat-form-field appearance="outline">
-                <mat-label>Select Time</mat-label>
-                <mat-select placeholder="Select Time" [(ngModel)]="slot.endTime">
-                  <mat-option *ngFor="let item of time" [value]="item">
-                    {{ item | date : "shortTime" }}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
+          <div class="block">
+            <p>Day:</p>
+            <mat-form-field appearance="outline">
+              <mat-label>Select Day</mat-label>
+              <mat-select placeholder="Select Time" [(ngModel)]="slot.day">
+                <mat-option *ngFor="let item of days" [value]="item">
+                  {{ item }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
+          <div class="block">
+            <p>Starting Time:</p>
+            <mat-form-field appearance="outline">
+              <mat-label>Select Time</mat-label>
+              <mat-select
+                placeholder="Select Time"
+                [(ngModel)]="slot.startTime"
+              >
+                <mat-option *ngFor="let item of time" [value]="item">
+                  {{ item | date : "shortTime" }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="block">
+            <p>Ending Time:</p>
+            <mat-form-field appearance="outline">
+              <mat-label>Select Time</mat-label>
+              <mat-select placeholder="Select Time" [(ngModel)]="slot.endTime">
+                <mat-option *ngFor="let item of time" [value]="item">
+                  {{ item | date : "shortTime" }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
       </div>
       <!-- holiday management -->
+      <hr />
+      <h4>Holiday Management</h4>
+      <div class="selectDate">
+        <mat-form-field appearance="outline">
+          <input
+            [matDatepickerFilter]="myFilter"
+            matInput
+            (dateChange)="addHoliday($event)"
+            placeholder="New Holiday Date"
+            [matDatepicker]="picker"
+          />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="holidays">
+        <span *ngFor="let date of holidays">
+          <strong>{{ date | date }}</strong>
+          <button mat-icon-button (click)="deleteHoliday(date)" color="primary">
+            <mat-icon>close</mat-icon>
+          </button>
+        </span>
+      </div>
     </section>
   </mat-tab>
-  <mat-tab label="Billing">
-    <!-- billing additional charges -->
-  </mat-tab>
+  <!-- <mat-tab label="Billing">
+  
+  </mat-tab> -->
   <mat-tab label="Policies">
-    <!-- terms & conditions -->
-    <!-- privacy policy -->
+    <section>
+      <!-- terms & conditions -->
+      <h4>Terms And Conditions</h4>
+      <form class="policies">
+        <mat-form-field appearance="outline">
+          <mat-label>Terms & Conditions</mat-label>
+          <textarea
+            matInput
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="5"
+            cdkAutosizeMaxRows="10"
+            [(ngModel)]="termsAndConditions"
+          ></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Privacy Policy</mat-label>
+          <textarea
+            matInput
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="5"
+            cdkAutosizeMaxRows="20"
+            [(ngModel)]="privacyPolicy"
+          ></textarea>
+        </mat-form-field>
+        <div class="actions">
+          <button mat-flat-button color="primary" type="submit">Save</button>
+        </div>
+      </form>
+      <!-- privacy policy -->
+    </section>
   </mat-tab>
 </mat-tab-group>

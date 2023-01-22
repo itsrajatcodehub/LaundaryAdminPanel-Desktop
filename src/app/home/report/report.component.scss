@@ -1,20 +1,14 @@
-.mat-tab-group{
-    width: 100%;
-    height: 100%;
-    .mat-tab{
-        color: red;
-        height: 100%;
-        width: 100%;
-        label{
-            color: red;
-        }
-        .mat-tab-body-content{
-        height: 100%;
-        width: 100%;
-        }
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:20px;
+    mat-card{
+        width: 300px;
+        height: 150px;
+        transition: scale 0.3s ease-in-out;
     }
-}
-.mat-tab-label {
-    color: red;
-    
+    mat-card:hover{
+        scale: 1.05;
+    }
 }

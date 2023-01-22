@@ -23,6 +23,7 @@ export class SettingsComponent implements OnInit {
       endDate: Timestamp.fromDate(new Date())
     }
   ]
+  holidays:Date[] = []
 
   reasons: Reason[] = [
     {
@@ -62,6 +63,8 @@ export class SettingsComponent implements OnInit {
   days:string[] = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
   icons:any[] = []
   slots:any[] = []
+  privacyPolicy:string = ''
+  termsAndConditions:string = ''
   areas:{title:string;id?:string}[] = []
   contactForm:FormGroup = new FormGroup({
     phone: new FormControl(''),
@@ -145,6 +148,10 @@ export class SettingsComponent implements OnInit {
     })
   }
 
+  addHoliday(event:any){
+    this.holidays.push(event.value)
+  }
+
   deleteReason(is:string){
     this.reasons = this.reasons.filter(reason => reason.id !== is)
   }
@@ -154,6 +161,16 @@ export class SettingsComponent implements OnInit {
   deleteArea(id:string){
     this.areas = this.areas.filter(area => area.id !== id)
   }
+
+  deleteHoliday(date:Date){
+    this.holidays = this.holidays.filter(holiday => holiday !== date)
+  }
+
+  // dateFilter
+  myFilter = (d: Date | null): boolean => {
+    // Prevent duplicates from holidays
+    return !this.holidays.some(holiday => holiday.getTime() === d?.getTime());
+  };
 
 }
 
