@@ -18,16 +18,16 @@
 @include mat.legacy-core();
 
 $urbanlaundry-palette: (
-  50: #579540,
-  100: #579540,
-  200: #579540,
-  300: #579540,
-  400: #579540,
-  500: #579540,
-  600: #579540,
+  50: #edffe6,
+  100: #d6fec7,
+  200: #c2e8b3,
+  300: #b2dca3,
+  400: #90c57d,
+  500: #84bc6f,
+  600: #69ab51,
   700: #579540,
-  800: #579540,
-  900: #579540,
+  800: #478330,
+  900: #366923,
   contrast: (
     50: rgba(black, 0.87),
     100: rgba(black, 0.87),
@@ -35,14 +35,24 @@ $urbanlaundry-palette: (
     300: rgb(36, 36, 36),
     400: rgb(36, 36, 36),
     500: rgb(36, 36, 36),
-    600: rgb(36, 36, 36),
-    700: rgb(36, 36, 36),
-    800: rgb(36, 36, 36),
-    900: rgb(36, 36, 36),
+    600: rgb(255, 255, 255),
+    700: rgb(255, 255, 255),
+    800: rgb(255, 255, 255),
+    900: rgb(255, 255, 255),
   ),
 );
+$simple-pallette:(
+  50:#3e94e0,
+  100:#3e94e0,
+  700: #3e94e0,
+  contrast: (
+    50:white,
+    100:white,
+    700:white,
+  )
+);
 $my-primary: mat.define-palette($urbanlaundry-palette, 700);
-$my-accent: mat.define-palette(mat.$cyan-palette, A200, A100, A400);
+$my-accent: mat.define-palette($simple-pallette,50);
 
 $my-theme: mat.define-light-theme(
   (
