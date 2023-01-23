@@ -34,11 +34,11 @@ import { AgentComponent } from './agent/agent.component';
     MatButtonModule,
     MatButtonToggleModule,
     MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    MatPaginatorModule,
     MatInputModule,
     MatFormFieldModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    ReactiveFormsModule,
     MatSelectModule,
     MatOptionModule
   ]

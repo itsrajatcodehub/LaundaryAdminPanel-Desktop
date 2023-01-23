@@ -1,1 +1,395 @@
-<p>pickup works!</p>
+
+<div id="buttons">
+  <button mat-stroked-button color="primary" ><i class="ri-refresh-line"></i> Refresh</button>
+  <button mat-stroked-button color="secondary" > <i class="ri-filter-line"></i>Clear Filter</button>
+ 
+    <mat-form-field appearance="fill">
+      <mat-label>Enter Date Range</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker">
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+ 
+</div>
+<mat-tab-group>
+  <mat-tab label="Time Slot"> 
+    <mat-accordion>
+      <mat-expansion-panel
+        style="padding: 0"
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            
+            <b style="color: black;font-size: 1.1rem; font-weight: 400;"> <i class="ri-time-line"></i> Time Slot :  9:30AM-10:30AM </b >
+            
+          </mat-panel-title>
+          
+        </mat-expansion-panel-header>
+        <div id="agents">
+          <div id="agent">
+        <span class="head1">
+          <h4>
+            ##UL4520 
+        
+          </h4>
+          <button>
+            Pending
+          </button> </span>
+            <div class="img">
+        
+              <img src="https://i.pravatar.cc/300" />
+            </div>
+            <span style="font-size: 1.1rem ;color: #000000;">Agent Name <button style="background-color: white;height:2rem;width:2rem;margin:0 1rem;padding: .4rem;border: 2px solid #579540;color:#579540;border-radius: 50%;"><i class="ri-phone-line" ></i></button></span>
+            
+            <h4>Area :Rampur, Prayagraj</h4>
+            <h3>Iron, Dry Clean</h3>
+            <div id="buttons">
+              <button class="cancel">Cancel</button>
+              <button class="accept">Accept</button>
+            </div>
+          </div>
+          <div id="agent">
+            <span class="head1">
+              <h4>
+                ##UL4520 
+            
+              </h4>
+              <button>
+                Pending
+              </button> </span>
+                <div class="img">
+            
+                  <img src="https://i.pravatar.cc/300" />
+                </div>
+                <span style="font-size: 1.1rem ;color: #000000;">Agent Name <button style="background-color: white;height:2rem;width:2rem;margin:0 1rem;padding: .4rem;border: 2px solid #579540;color:#579540;border-radius: 50%;"><i class="ri-phone-line" ></i></button></span>
+                
+                <h4>Area :Rampur, Prayagraj</h4>
+                <h3>Iron, Dry Clean</h3>
+                <div id="buttons">
+                  <button class="cancel">Cancel</button>
+                  <button class="accept">Accept</button>
+                </div>
+              </div>
+              <div id="agent">
+                <span class="head1">
+                  <h4>
+                    ##UL4520 
+                
+                  </h4>
+                  <button>
+                    Pending
+                  </button> </span>
+                    <div class="img">
+                
+                      <img src="https://i.pravatar.cc/300" />
+                    </div>
+                    <span style="font-size: 1.1rem ;color: #000000;">Agent Name <button style="background-color: white;height:2rem;width:2rem;margin:0 1rem;padding: .4rem;border: 2px solid #579540;color:#579540;border-radius: 50%;"><i class="ri-phone-line" ></i></button></span>
+                    
+                    <h4>Area :Rampur, Prayagraj</h4>
+                    <h3>Iron, Dry Clean</h3>
+                    <div id="buttons">
+                      <button class="cancel">Cancel</button>
+                      <button class="accept">Accept</button>
+                    </div>
+                  </div>
+                  <div id="agent">
+                    <span class="head1">
+                      <h4>
+                        ##UL4520 
+                    
+                      </h4>
+                      <button>
+                        Pending
+                      </button> </span>
+                        <div class="img">
+                    
+                          <img src="https://i.pravatar.cc/300" />
+                        </div>
+                        <span style="font-size: 1.1rem ;color: #000000;">Agent Name <button style="background-color: white;height:2rem;width:2rem;margin:0 1rem;padding: .4rem;border: 2px solid #579540;color:#579540;border-radius: 50%;"><i class="ri-phone-line" ></i></button></span>
+                        
+                        <h4>Area :Rampur, Prayagraj</h4>
+                        <h3>Iron, Dry Clean</h3>
+                        <div id="buttons">
+                          <button class="cancel">Cancel</button>
+                          <button class="accept">Accept</button>
+                        </div>
+                      </div>
+                      <div id="agent">
+                        <span class="head1">
+                          <h4>
+                            ##UL4520 
+                        
+                          </h4>
+                          <button>
+                            Pending
+                          </button> </span>
+                            <div class="img">
+                        
+                              <img src="https://i.pravatar.cc/300" />
+                            </div>
+                            <span style="font-size: 1.1rem ;color: #000000;">Agent Name <button style="background-color: white;height:2rem;width:2rem;margin:0 1rem;padding: .4rem;border: 2px solid #579540;color:#579540;border-radius: 50%;"><i class="ri-phone-line" ></i></button></span>
+                            
+                            <h4>Area :Rampur, Prayagraj</h4>
+                            <h3>Iron, Dry Clean</h3>
+                            <div id="buttons">
+                              <button class="cancel">Cancel</button>
+                              <button class="accept">Accept</button>
+                            </div>
+                          </div>
+                          <div id="agent">
+                            <span class="head1">
+                              <h4>
+                                ##UL4520 
+                            
+                              </h4>
+                              <button>
+                                Pending
+                              </button> </span>
+                                <div class="img">
+                            
+                                  <img src="https://i.pravatar.cc/300" />
+                                </div>
+                                <span style="font-size: 1.1rem ;color: #000000;">Agent Name <button style="background-color: white;height:2rem;width:2rem;margin:0 1rem;padding: .4rem;border: 2px solid #579540;color:#579540;border-radius: 50%;"><i class="ri-phone-line" ></i></button></span>
+                                
+                                <h4>Area :Rampur, Prayagraj</h4>
+                                <h3>Iron, Dry Clean</h3>
+                                <div id="buttons">
+                                  <button class="cancel">Cancel</button>
+                                  <button class="accept">Accept</button>
+                                </div>
+                              </div>
+         </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+    
+  </mat-tab>    
+  <mat-tab label="Agent">
+    <mat-accordion>
+      <mat-expansion-panel
+        style="padding: 0"
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <img src="https://i.pravatar.cc/300" />
+            <span>Agent Name</span>
+            <i class="ri-phone-fill"></i>
+          </mat-panel-title>
+          
+        </mat-expansion-panel-header>
+        <div id="contentTable">
+          <div id="complete">
+            <b id="head">In Complete</b>
+          
+          
+           <table>
+             <thead>
+               <tr>
+                 <th >Order ID</th>
+                 <th >Customer Name</th>
+                 <th >Service</th>
+                 <th >Locations</th>
+                 <th>Actions</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr  uk-toggle="target: #details-id">
+                 <td  >DASD3231</td>
+                 <td ><i class="ri-phone-fill"></i>John Doe</td>
+                 <td >Car Wash</td>
+                 <td >1234 Main </td>
+                 <td >
+                   <button  class="agent">Change Agent</button>
+                   <button  class="cancel">Cancel</button>
+                   <i class="ri-information-line"></i>
+                 </td>
+               </tr>
+             
+             </tbody>
+           </table>
+          
+          </div>
+        <div id="inComplete">
+          <b id="head">In Complete</b>
+        
+        
+         <table>
+           <thead>
+             <tr>
+               <th >Order ID</th>
+               <th >Customer Name</th>
+               <th >Service</th>
+               <th >Locations</th>
+               <th>Actions</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td >123456</td>
+               <td ><i class="ri-phone-fill"></i>John Doe</td>
+               <td >Car Wash</td>
+               <td >1234 Main </td>
+               <td >
+                 <button  class="agent">Change Agent</button>
+                 <button  class="cancel">Cancel</button>
+                 <i class="ri-information-line"></i>
+               </td>
+             </tr>
+           
+           </tbody>
+         </table>
+        
+        </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-accordion>
+      <mat-expansion-panel
+        style="padding: 0"
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <img src="https://i.pravatar.cc/300" />
+            <span>Agent Name</span>
+            <i class="ri-phone-fill"></i>
+          </mat-panel-title>
+          
+        </mat-expansion-panel-header>
+        
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-tab>
+  
+</mat-tab-group>
+
+<div id="details-id" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+    <div class="button" uk-toggle="target: #details-id" style="position: absolute;top: 2rem;right: 2rem; border-radius: 50%;height: 2rem;width: 2rem; border:2px solid grey;color:grey;display: flex;align-items: center;justify-content: center;">
+      <i class="ri-close-fill"></i>
+    </div>
+    <span>
+        <b>Pickup Details of #UL13072</b>
+        <button>Pending For Pickup</button>
+      </span>
+  <p> Customer Details</p>
+  <div class="card">
+    <img src="https://i.pravatar.cc/300" alt="">
+    <div>
+      Name: Arun Arora <br>
+      Email: Example@gmail.com
+    </div>
+    <div>
+      Robert Robertson, 1234 NW Bobcat Lane<br>
+      Phone: 9995566633
+    </div>
+    <div>
+      <i class="ri-phone-fill"></i>
+      <i class="ri-mail-line"></i>
+    </div>
+  </div>
+  <p>Pickup Agent Details</p>
+  <div class="card">
+    <img src="https://i.pravatar.cc/300" alt="">
+    <div>
+     Name: Ashish Rohra <br>
+      Email: Example@gmail.com
+    </div>
+    <div>
+      Robert Robertson, 1234 NW Bobcat Lane<br>
+      Phone: 9995566633
+    </div>
+    <div>
+      <i class="ri-phone-fill"></i>
+      <i class="ri-mail-line"></i>
+    </div>
+  </div>
+  <p>Order Details</p>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title style="color: black; display: flex;gap: 3rem;">
+        <p>Order ID: #UL13-072 </p>
+        <p>Pickup : 12 April, 12:00 PM</p>
+        <p>Expected Delivery : 12 April, 12:00 PM</p>
+        </mat-panel-title>
+     
+      </mat-expansion-panel-header>
+      
+      <div class="tables">
+        <table>
+          <label >Wash & Iron</label>
+         
+          <tr>
+            <td>Shirt</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Shirt</td>
+            <td>2</td>
+          </tr>
+          <label >
+  
+            Dry Clean
+          </label>
+          <tr>
+            <td>Shirt</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Shirt</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Total Weight : 3 KG</td>
+            <td>No. of Items : 15</td>
+          </tr>
+        </table>
+        <table class="table">
+          <thead>
+            <label> Bill Summery</label>
+          </thead>
+          <tr>
+            <td>Shirt</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Shirt</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Shirt</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Shirt</td>
+            <td>2</td>
+          </tr>
+        
+          <tr>
+            <td>Total Amount</td>
+            <td>$899</td>
+          </tr>
+        </table>
+      </div>
+    </mat-expansion-panel>
+  
+  </mat-accordion>
+  </div>
+</div>
+
+<div id="cancel" uk-modal>
+  <div class="uk-modal-dialog">
+      <h4 >Booking Will Be Canceled</h4>
+      <p style="color: grey;font-size: 1rem;">Order ID:#UL4520</p>
+      <div class="buttons">
+        <button class="uk-modal-close" type="button" class="delete">Delete</button>
+        <button class="uk-modal-close" type="button " class="cancel">cancel</button>
+      </div>
+  </div>
+</div>
