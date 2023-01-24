@@ -66,7 +66,7 @@
         </mat-form-field>
         <div class="row">
           <button color="primary" mat-stroked-button>Cancel</button>
-          <button color="primary" mat-flat-button>Save</button>
+          <button color="primary" (click)="saveContactSettings()" mat-flat-button>Save</button>
         </div>
       </form>
       <hr />
@@ -83,6 +83,10 @@
             <mat-icon>delete</mat-icon>
           </button>
         </mat-card>
+        <div class="row">
+          <button color="primary" mat-stroked-button>Cancel</button>
+          <button color="primary" (click)="saveReasonSettings()" mat-flat-button>Save</button>
+        </div>
       </div>
     </section>
   </mat-tab>
@@ -297,21 +301,10 @@
         <button mat-stroked-button color="primary" (click)="addNewSlot()">
           <mat-icon>add</mat-icon> Add Slot</button
         >&nbsp;&nbsp;&nbsp;&nbsp;
-        <button mat-flat-button color="primary">Save</button>
+        <button mat-flat-button color="primary" (click)="saveSlots()">Save</button>
       </div>
       <div class="list">
         <div class="timeManagement" *ngFor="let slot of slots">
-          <div class="block">
-            <p>Day:</p>
-            <mat-form-field appearance="outline">
-              <mat-label>Select Day</mat-label>
-              <mat-select placeholder="Select Time" [(ngModel)]="slot.day">
-                <mat-option *ngFor="let item of days" [value]="item">
-                  {{ item }}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
           <div class="block">
             <p>Starting Time:</p>
             <mat-form-field appearance="outline">
@@ -337,6 +330,7 @@
               </mat-select>
             </mat-form-field>
           </div>
+          <button mat-icon-button color="warn" (click)="deleteSlot(slot)"><mat-icon>delete</mat-icon></button>
         </div>
       </div>
       <!-- holiday management -->
@@ -368,9 +362,45 @@
       </div>
     </section>
   </mat-tab>
-  <!-- <mat-tab label="Billing">
-  
-  </mat-tab> -->
+  <mat-tab label="Billing">
+    <!-- discounts -->
+    <h4>Discounts</h4>
+    <hr>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Discount</th>
+          <th>Type</th>
+          <th>Start Price</th>
+          <th>End Price</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Type</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let discount of discounts">
+          <td>{{discount.title}}</td>
+          <td>{{discount.value}}</td>
+          <td>{{discount.type}}</td>
+          <td>{{discount.min}}</td>
+          <td>{{discount.max}}</td>
+          <td>{{discount.startDate.toDate() | date}}</td>
+          <td>{{discount.endDate.toDate() | date}}</td>
+          <td>{{discount.enabled}}</td>
+          <td>
+            <mat-slide-toggle>Enable/Disable</mat-slide-toggle>
+            <button mat-icon-button></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- taxes -->
+    <!-- charges -->
+  </mat-tab>
   <mat-tab label="Policies">
     <section>
       <!-- terms & conditions -->
