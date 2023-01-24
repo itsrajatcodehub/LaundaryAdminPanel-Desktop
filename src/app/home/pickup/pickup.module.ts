@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import { PickupRoutingModule } from './pickup-routing.module';
 import { PickupComponent } from './pickup.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {MatLegacyTabsModule as MatTabsModule} from '@angular/material/legacy-tabs';
 import {MatTableModule} from '@angular/material/table';
+
 import { MatLegacyButtonModule as MatButtonModule } from 
     '@angular/material/legacy-button';
 import { MatButtonToggleModule } from 
@@ -21,6 +21,8 @@ import { MatNativeDateModule } from
 import { ComponentsModule } from 'src/app/components/components.module';
 import {DialogModule} from '@angular/cdk/dialog';
 import {MatDialogModule} from '@angular/material/dialog';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
 
     @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatNativeDateModule,
     ComponentsModule,
     DialogModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule,
   ]
 })
 export class PickupModule { }
