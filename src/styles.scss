@@ -35,14 +35,24 @@ $urbanlaundry-palette: (
     300: rgb(36, 36, 36),
     400: rgb(36, 36, 36),
     500: rgb(36, 36, 36),
-    600: rgb(36, 36, 36),
-    700: rgb(36, 36, 36),
-    800: rgb(36, 36, 36),
-    900: rgb(36, 36, 36),
+    600: rgb(255, 255, 255),
+    700: rgb(255, 255, 255),
+    800: rgb(255, 255, 255),
+    900: rgb(255, 255, 255),
   ),
 );
+$simple-pallette:(
+  50:#3e94e0,
+  100:#3e94e0,
+  700: #3e94e0,
+  contrast: (
+    50:white,
+    100:white,
+    700:white,
+  )
+);
 $my-primary: mat.define-palette($urbanlaundry-palette, 700);
-$my-accent: mat.define-palette(mat.$cyan-palette, A200, A100, A400);
+$my-accent: mat.define-palette($simple-pallette,50);
 
 $my-theme: mat.define-light-theme(
   (

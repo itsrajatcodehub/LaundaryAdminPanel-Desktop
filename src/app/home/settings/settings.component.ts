@@ -2,6 +2,8 @@ import { Dialog } from '@angular/cdk/dialog';
 import { Component, OnInit } from '@angular/core';
 import { Timestamp } from '@angular/fire/firestore';
 import { FormControl, FormGroup } from '@angular/forms';
+import { AlertsAndNotificationsService } from 'src/app/services/alerts-and-notifications.service';
+import { DatabaseService } from 'src/app/services/database.service';
 import { AddNewBannerComponent } from './add-new-banner/add-new-banner.component';
 import { AddNewClothComponent } from './add-new-cloth/add-new-cloth.component';
 
@@ -23,6 +25,7 @@ export class SettingsComponent implements OnInit {
       endDate: Timestamp.fromDate(new Date())
     }
   ]
+  holidays:Date[] = []
 
   reasons: Reason[] = [
     {
@@ -59,15 +62,30 @@ export class SettingsComponent implements OnInit {
       ]
     },
   ]
+  discounts:Discount[] = [
+    {
+      id: '1',
+      title: 'Discount 1',
+      enabled: true,
+      startDate: Timestamp.fromDate(new Date()),
+      endDate: Timestamp.fromDate(new Date()),
+      value: 10,
+      type: 'percentage',
+      max:-1,
+      min:-1,
+    }
+  ]
   days:string[] = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
   icons:any[] = []
   slots:any[] = []
+  privacyPolicy:string = ''
+  termsAndConditions:string = ''
   areas:{title:string;id?:string}[] = []
   contactForm:FormGroup = new FormGroup({
     phone: new FormControl(''),
     whatsapp: new FormControl(''),
   })
-  constructor(private dialog:Dialog) { }
+  constructor(private dialog:Dialog,private databaseService:DatabaseService,private alertify:AlertsAndNotificationsService) { }
 
   ngOnInit(): void {
     // get this file in json from https://fonts.google.com/metadata/icons
@@ -81,7 +99,7 @@ export class SettingsComponent implements OnInit {
     time.setHours(0,0,0,0)
     for(let i = 0; i < 24; i++){
       this.time.push(new Date(time))
-      time.setHours(time.getHours() + 1)
+      time.setMinutes(time.getMinutes() + 30)
     }
   }
 
@@ -102,7 +120,7 @@ export class SettingsComponent implements OnInit {
   }
 
   addNewSlot(){
-    this.slots.push({startTime:'',endTime:'',day:''})
+    this.slots.push({startTime:'',endTime:''})
   }
 
   addNewBanner(){
@@ -145,6 +163,10 @@ export class SettingsComponent implements OnInit {
     })
   }
 
+  addHoliday(event:any){
+    this.holidays.push(event.value)
+  }
+
   deleteReason(is:string){
     this.reasons = this.reasons.filter(reason => reason.id !== is)
   }
@@ -154,6 +176,47 @@ export class SettingsComponent implements OnInit {
   deleteArea(id:string){
     this.areas = this.areas.filter(area => area.id !== id)
   }
+
+  deleteSlot(slot:any){
+    this.slots = this.slots.filter(s => s !== slot)
+  }
+
+  deleteHoliday(date:Date){
+    this.holidays = this.holidays.filter(holiday => holiday !== date)
+  }
+
+  saveContactSettings(){
+    console.log(this.contactForm.value);
+    this.databaseService.updateSettings({contact:this.contactForm.value}).then(() => {
+      this.alertify.presentToast('Contact Updated')
+    }).catch(err => {
+      this.alertify.presentToast('Error Updating Contact','error')
+    })
+  }
+
+  saveReasonSettings(){
+    console.log(this.reasons);
+    this.databaseService.updateSettings({reasons:this.reasons}).then(() => {
+      this.alertify.presentToast('Reasons Updated')
+    }).catch(err => {
+      this.alertify.presentToast('Error Updating Reasons','error')
+    })
+  }
+
+  saveSlots(){
+    console.log(this.slots);
+    this.databaseService.updateSettings({slots:this.slots}).then(() => {
+      this.alertify.presentToast('Slots Updated')
+    }).catch(err => {
+      this.alertify.presentToast('Error Updating Slots','error')
+    })
+  }
+
+  // dateFilter
+  myFilter = (d: Date | null): boolean => {
+    // Prevent duplicates from holidays
+    return !this.holidays.some(holiday => holiday.getTime() === d?.getTime());
+  };
 
 }
 
@@ -189,4 +252,15 @@ interface Cloth {
 interface Icon {
   title: string;
   icon: string;
+}
+interface Discount { 
+  id?:string;
+  title: string;
+  type:'percentage'|'flat';
+  value: number;
+  min: number;
+  max: number;
+  startDate: any;
+  endDate: any;
+  enabled: boolean;
 }

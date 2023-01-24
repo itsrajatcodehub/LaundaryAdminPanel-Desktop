@@ -147,88 +147,6 @@ export class DatabaseService {
     return getDoc(doc(this.fs, 'users/' + id));
   }
 
-  //CRUD for bookings
-
-  // async addBooking(booking: Booking) {
-  //   await updateDoc(doc(this.fs, 'sitedata/counters'), {
-  //     totalBookings: increment(1),
-  //   });
-  //   await this.updateBookingAnalytics('added');
-  //   await this.updateEarningAnalytics(booking.paidAmount);
-  //   return addDoc(collection(this.fs, 'bookings'), booking);
-  // }
-
-  // getAllBookings() {
-  //   return getDocs(query(collection(this.fs, 'bookings'), orderBy('date')));
-  // }
-
-  // getFirstBookings(length: number) {
-  //   return getDocs(
-  //     query(
-  //       collection(this.fs, 'bookings'),
-  //       orderBy('bookingNo'),
-  //       limit(length)
-  //     )
-  //   );
-  // }
-
-  // getNextBookings(length: number, lastDocument: DocumentSnapshot) {
-  //   return getDocs(
-  //     query(
-  //       collection(this.fs, 'bookings'),
-  //       orderBy('bookingNo'),
-  //       limit(length),
-  //       startAfter(lastDocument)
-  //     )
-  //   );
-  // }
-
-  // getPreviousBookings(length: number, firstDocument: DocumentSnapshot) {
-  //   return getDocs(
-  //     query(
-  //       collection(this.fs, 'bookings'),
-  //       orderBy('bookingNo'),
-  //       limitToLast(length),
-  //       endAt(firstDocument)
-  //     )
-  //   );
-  // }
-
-  // async editBooking(bookingId: string, booking: Booking) {
-  //   // calculate difference between payable amounts
-  //   const oldBookingDoc = await getDoc(doc(this.fs, 'bookings/' + bookingId));
-  //   if (oldBookingDoc.exists()) {
-  //     const oldBooking = oldBookingDoc.data() as Booking;
-  //     const difference = booking.paidAmount - oldBooking.paidAmount;
-  //     await this.updateEarningAnalytics(difference);
-  //     return updateDoc(doc(this.fs, 'bookings/' + bookingId), booking);
-  //   }
-  // }
-
-  // async cancelBooking(bookingId: string, refundAmount: number) {
-  //   await updateDoc(doc(this.fs, 'sitedata/counters'), {
-  //     totalCancelledBookings: increment(1),
-  //   });
-  //   await this.updateBookingAnalytics('cancelled');
-  //   await this.updateEarningAnalytics(-refundAmount);
-  //   return updateDoc(doc(this.fs, 'bookings/' + bookingId), {
-  //     status: 'Cancelled',
-  //   });
-  // }
-
-  // updateBookingAnalytics(booking: 'added' | 'cancelled') {
-  //   const today = new Date();
-  //   const docId = today.getMonth().toString() + today.getFullYear().toString();
-  //   return setDoc(
-  //     doc(this.fs, 'analytics/' + docId),
-  //     {
-  //       bookings: increment(booking == 'added' ? 1 : 0),
-  //       cancelled: increment(booking == 'cancelled' ? 1 : 0),
-  //     },
-  //     { merge: true }
-  //   );
-  // }
-
   updateUserAnalytics(user: 'added' | 'deleted') {
     const today = new Date();
     const docId = today.getMonth().toString() + today.getFullYear().toString();
@@ -263,7 +181,9 @@ export class DatabaseService {
   getAllNotification() {
     return getDocs(query(collection(this.fs, 'admin-notifications'), orderBy('timestamp')));
   }
-
-
   
+  updateSettings(settings: any) {
+    return setDoc(doc(this.fs, 'sitedata/settings'), settings, { merge: true });
+  }
+
 }
