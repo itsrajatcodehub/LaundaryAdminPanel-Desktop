@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="header_bar">
     <button (click)="addNewUserDetails()">
       <i class="ri-add-line"></i>
@@ -140,7 +140,6 @@
         <label for="country">country</label>
         <option *ngFor="let state of states">{{state}}</option>
       </select>
-      <!-- <input placeholder="Country" formControlName="countryName" /> -->
       <input placeholder="State" formControlName="stateName" />
       <input placeholder="City" formControlName="cityName" />
       <textarea
@@ -168,4 +167,2502 @@
       <button uk-toggle="target: #deleteUser">Delete</button>
     </div>
   </div>
+</div> -->
+
+
+
+
+
+
+<!--  NEW UI -->
+<div class="main-container">
+  <div class="header">
+    <div class="search"><i class="ri-search-line"></i><input type="text" placeholder="Search"></div>
+
+    <div class="icons">
+      <button mat-stroked-button color="primary">
+        <i class="ri-refresh-line"></i>
+        <span>Refresh</span>
+      </button>
+      <button mat-stroked-button color="primary">
+        <i class="ri-filter-2-line"></i>
+        <span>Clear Filter</span>
+      </button>
+      <div class="date">
+        <mat-form-field appearance="outline">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+  <!-- DROPDOWN - 1 -->
+  <div class="dropdown">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Ashok Nagar, Prayagraj, 210010
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="customers">
+          <div>
+            <h3>25</h3>
+            <p>Total Customers</p>
+          </div>
+          <div>
+            <h3>15</h3>
+            <p>Total Order</p>
+          </div>
+          <div>
+            <h3>₹2,200</h3>
+            <p>Average Bill</p>
+          </div>
+          <div>
+            <h3>₹20,220</h3>
+            <p>Total Bill</p>
+          </div>
+          <div id="pending">
+            <h3>₹20,220</h3>
+            <p>Pending Bill</p>
+          </div>
+        </div>
+
+        <div class="table-1" style="font-weight: bold;">
+          <div class="items">Customers</div>
+          <div class="items">Phone</div>
+          <div class="items">Total Orders</div>
+          <div class="items">Order/Week</div>
+          <div class="items">Pending Bill</div>
+          <div class="items">Last Bill</div>
+          <div class="items">Total Bill</div>
+          <div class="items">Action</div>
+        </div>
+
+        <!-- FIELD - 1 -->
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header #headerpanel id="headerpanel">
+            <mat-panel-title>
+              <div class="table-2">
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Arun Arora</p></div>
+                <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
+                <div class="items"><p>15</p></div>
+                <div class="items"><p>04</p></div>
+                <div class="items"><p>₹225</p></div>
+                <div class="items"><p>₹100</p></div>
+                <div class="items"><p>₹25,000</p></div>
+                <div class="items">
+                  <mat-icon>highlight_off</mat-icon>
+                  <mat-icon>delete</mat-icon>
+                  <mat-icon>history</mat-icon>
+                </div>
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          
+          <div class="user-header">
+            <div class="img"><img src="assets/dp.png" alt=""></div>
+              <div class="name">
+                <p>Name: Arun Arora</p>
+                <p>Email: Example@gmail.com</p>
+              </div>
+              <div class="address">
+                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <p class="phone">Phone: 9995566633</p>
+              </div>
+              <div class="icons">
+                <mat-icon> call</mat-icon>
+                <mat-icon> email</mat-icon>
+              </div>
+          </div>
+          <div class="user-details">
+            <div class="head">
+              <h3>Last 5 Bookings form Arun Arora</h3>
+              <button mat-button>View All Bookings</button>
+            </div>
+            <div class="details-1">
+              <div class="items1">Orders</div>
+              <div class="items1">Service</div>
+              <div class="items1">Weight</div>
+              <div class="items1">Pickup Time</div>
+              <div class="items1">Delivery Time</div>
+              <div class="items1">Status</div>
+              <div class="items1">Total Amount</div>
+            </div>
+
+            <!-- ROW - 1 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            <!-- ROW - 2 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            <!-- ROW - 3 -->
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            
+          </div>
+
+        </mat-expansion-panel>
+
+        <!-- FIELD - 2 -->
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header #headerpanel id="headerpanel">
+            <mat-panel-title>
+              <div class="table-2">
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Shyam</p></div>
+                <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
+                <div class="items"><p>15</p></div>
+                <div class="items"><p>04</p></div>
+                <div class="items"><p>₹225</p></div>
+                <div class="items"><p>₹100</p></div>
+                <div class="items"><p>₹25,000</p></div>
+                <div class="items">
+                  <mat-icon>highlight_off</mat-icon>
+                  <mat-icon>delete</mat-icon>
+                  <mat-icon>history</mat-icon>
+                </div>
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          
+          <div class="user-header">
+            <div class="img"><img src="assets/dp.png" alt=""></div>
+              <div class="name">
+                <p>Name: Shyam</p>
+                <p>Email: Example@gmail.com</p>
+              </div>
+              <div class="address">
+                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <p class="phone">Phone: 9995566633</p>
+              </div>
+              <div class="icons">
+                <mat-icon> call</mat-icon>
+                <mat-icon> email</mat-icon>
+              </div>
+          </div>
+          <div class="user-details">
+            <div class="head">
+              <h3>Last 5 Bookings form Shyam</h3>
+              <button mat-button>View All Bookings</button>
+            </div>
+            <div class="details-1">
+              <div class="items1">Orders</div>
+              <div class="items1">Service</div>
+              <div class="items1">Weight</div>
+              <div class="items1">Pickup Time</div>
+              <div class="items1">Delivery Time</div>
+              <div class="items1">Status</div>
+              <div class="items1">Total Amount</div>
+            </div>
+
+            <!-- ROW - 1 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="done">Completed</div>
+                    <div class="item2" id="done">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            
+            <!-- ROW - 2 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="done">Completed</div>
+                    <div class="item2" id="done">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+
+            <!-- ROW - 3 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="done">Completed</div>
+                    <div class="item2" id="done">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            
+          </div>
+
+        </mat-expansion-panel>
+
+        <!-- FIELD - 3 -->
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header #headerpanel id="headerpanel">
+            <mat-panel-title>
+              <div class="table-2">
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Saptam</p></div>
+                <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
+                <div class="items"><p>15</p></div>
+                <div class="items"><p>04</p></div>
+                <div class="items"><p>₹225</p></div>
+                <div class="items"><p>₹100</p></div>
+                <div class="items"><p>₹25,000</p></div>
+                <div class="items">
+                  <mat-icon>highlight_off</mat-icon>
+                  <mat-icon>delete</mat-icon>
+                  <mat-icon>history</mat-icon>
+                </div>
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          
+          <div class="user-header">
+            <div class="img"><img src="assets/dp.png" alt=""></div>
+              <div class="name">
+                <p>Name: Saptam</p>
+                <p>Email: Example@gmail.com</p>
+              </div>
+              <div class="address">
+                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <p class="phone">Phone: 9995566633</p>
+              </div>
+              <div class="icons">
+                <mat-icon> call</mat-icon>
+                <mat-icon> email</mat-icon>
+              </div>
+          </div>
+          <div class="user-details">
+            <div class="head">
+              <h3>Last 5 Bookings form Saptam</h3>
+              <button mat-button>View All Bookings</button>
+            </div>
+            <div class="details-1">
+              <div class="items1">Orders</div>
+              <div class="items1">Service</div>
+              <div class="items1">Weight</div>
+              <div class="items1">Pickup Time</div>
+              <div class="items1">Delivery Time</div>
+              <div class="items1">Status</div>
+              <div class="items1">Total Amount</div>
+            </div>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="done">In Progress</div>
+                    <div class="item2" id="done">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            
+          </div>
+
+        </mat-expansion-panel>
+
+        <!-- FIELD -4 -->
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header #headerpanel id="headerpanel">
+            <mat-panel-title>
+              <div class="table-2">
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Kartik Sharma</p></div>
+                <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
+                <div class="items"><p>15</p></div>
+                <div class="items"><p>04</p></div>
+                <div class="items"><p>₹225</p></div>
+                <div class="items"><p>₹100</p></div>
+                <div class="items"><p>₹25,000</p></div>
+                <div class="items">
+                  <mat-icon>highlight_off</mat-icon>
+                  <mat-icon>delete</mat-icon>
+                  <mat-icon>history</mat-icon>
+                </div>
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          
+          <div class="user-header">
+            <div class="img"><img src="assets/dp.png" alt=""></div>
+              <div class="name">
+                <p>Name: Kartik Sharma</p>
+                <p>Email: Example@gmail.com</p>
+              </div>
+              <div class="address">
+                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <p class="phone">Phone: 9995566633</p>
+              </div>
+              <div class="icons">
+                <mat-icon> call</mat-icon>
+                <mat-icon> email</mat-icon>
+              </div>
+          </div>
+          <div class="user-details">
+            <div class="head">
+              <h3>Last 5 Bookings form Kartik Sharma</h3>
+              <button mat-button>View All Bookings</button>
+            </div>
+            <div class="details-1">
+              <div class="items1">Orders</div>
+              <div class="items1">Service</div>
+              <div class="items1">Weight</div>
+              <div class="items1">Pickup Time</div>
+              <div class="items1">Delivery Time</div>
+              <div class="items1">Status</div>
+              <div class="items1">Total Amount</div>
+            </div>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="done">In Progress</div>
+                    <div class="item2" id="done">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            
+          </div>
+
+        </mat-expansion-panel>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+  <!-- DROPDOWN - 2 -->
+  <div class="dropdown">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Sainik Nagar, Prayagraj, 210010
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="customers">
+          <div>
+            <h3>25</h3>
+            <p>Total Customers</p>
+          </div>
+          <div>
+            <h3>15</h3>
+            <p>Total Order</p>
+          </div>
+          <div>
+            <h3>₹2,200</h3>
+            <p>Average Bill</p>
+          </div>
+          <div>
+            <h3>₹20,220</h3>
+            <p>Total Bill</p>
+          </div>
+          <div id="pending">
+            <h3>₹20,220</h3>
+            <p>Pending Bill</p>
+          </div>
+        </div>
+
+        <div class="table-1" style="font-weight: bold;">
+          <div class="items">Customers</div>
+          <div class="items">Phone</div>
+          <div class="items">Total Orders</div>
+          <div class="items">Order/Week</div>
+          <div class="items">Pending Bill</div>
+          <div class="items">Last Bill</div>
+          <div class="items">Total Bill</div>
+          <div class="items">Action</div>
+        </div>
+
+        <!-- FIELD - 1 -->
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header #headerpanel id="headerpanel">
+            <mat-panel-title>
+              <div class="table-2">
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Arun Arora</p></div>
+                <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
+                <div class="items"><p>15</p></div>
+                <div class="items"><p>04</p></div>
+                <div class="items"><p>₹225</p></div>
+                <div class="items"><p>₹100</p></div>
+                <div class="items"><p>₹25,000</p></div>
+                <div class="items">
+                  <mat-icon>highlight_off</mat-icon>
+                  <mat-icon>delete</mat-icon>
+                  <mat-icon>history</mat-icon>
+                </div>
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          
+          <div class="user-header">
+            <div class="img"><img src="assets/dp.png" alt=""></div>
+              <div class="name">
+                <p>Name: Arun Arora</p>
+                <p>Email: Example@gmail.com</p>
+              </div>
+              <div class="address">
+                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <p class="phone">Phone: 9995566633</p>
+              </div>
+              <div class="icons">
+                <mat-icon> call</mat-icon>
+                <mat-icon> email</mat-icon>
+              </div>
+          </div>
+          <div class="user-details">
+            <div class="head">
+              <h3>Last 5 Bookings form Arun Arora</h3>
+              <button mat-button>View All Bookings</button>
+            </div>
+            <div class="details-1">
+              <div class="items1">Orders</div>
+              <div class="items1">Service</div>
+              <div class="items1">Weight</div>
+              <div class="items1">Pickup Time</div>
+              <div class="items1">Delivery Time</div>
+              <div class="items1">Status</div>
+              <div class="items1">Total Amount</div>
+            </div>
+
+            <!-- ROW - 1 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            <!-- ROW - 2 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            <!-- ROW - 3 -->
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            
+          </div>
+
+        </mat-expansion-panel>
+
+        <!-- FIELD - 2 -->
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header #headerpanel id="headerpanel">
+            <mat-panel-title>
+              <div class="table-2">
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Shyam</p></div>
+                <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
+                <div class="items"><p>15</p></div>
+                <div class="items"><p>04</p></div>
+                <div class="items"><p>₹225</p></div>
+                <div class="items"><p>₹100</p></div>
+                <div class="items"><p>₹25,000</p></div>
+                <div class="items">
+                  <mat-icon>highlight_off</mat-icon>
+                  <mat-icon>delete</mat-icon>
+                  <mat-icon>history</mat-icon>
+                </div>
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          
+          <div class="user-header">
+            <div class="img"><img src="assets/dp.png" alt=""></div>
+              <div class="name">
+                <p>Name: Shyam</p>
+                <p>Email: Example@gmail.com</p>
+              </div>
+              <div class="address">
+                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <p class="phone">Phone: 9995566633</p>
+              </div>
+              <div class="icons">
+                <mat-icon> call</mat-icon>
+                <mat-icon> email</mat-icon>
+              </div>
+          </div>
+          <div class="user-details">
+            <div class="head">
+              <h3>Last 5 Bookings form Shyam</h3>
+              <button mat-button>View All Bookings</button>
+            </div>
+            <div class="details-1">
+              <div class="items1">Orders</div>
+              <div class="items1">Service</div>
+              <div class="items1">Weight</div>
+              <div class="items1">Pickup Time</div>
+              <div class="items1">Delivery Time</div>
+              <div class="items1">Status</div>
+              <div class="items1">Total Amount</div>
+            </div>
+
+            <!-- ROW - 1 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="done">Completed</div>
+                    <div class="item2" id="done">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            
+            <!-- ROW - 2 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="done">Completed</div>
+                    <div class="item2" id="done">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+
+            <!-- ROW - 3 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="done">Completed</div>
+                    <div class="item2" id="done">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            
+          </div>
+
+        </mat-expansion-panel>
+
+        <!-- FIELD - 3 -->
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header #headerpanel id="headerpanel">
+            <mat-panel-title>
+              <div class="table-2">
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Saptam</p></div>
+                <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
+                <div class="items"><p>15</p></div>
+                <div class="items"><p>04</p></div>
+                <div class="items"><p>₹225</p></div>
+                <div class="items"><p>₹100</p></div>
+                <div class="items"><p>₹25,000</p></div>
+                <div class="items">
+                  <mat-icon>highlight_off</mat-icon>
+                  <mat-icon>delete</mat-icon>
+                  <mat-icon>history</mat-icon>
+                </div>
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          
+          <div class="user-header">
+            <div class="img"><img src="assets/dp.png" alt=""></div>
+              <div class="name">
+                <p>Name: Saptam</p>
+                <p>Email: Example@gmail.com</p>
+              </div>
+              <div class="address">
+                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <p class="phone">Phone: 9995566633</p>
+              </div>
+              <div class="icons">
+                <mat-icon> call</mat-icon>
+                <mat-icon> email</mat-icon>
+              </div>
+          </div>
+          <div class="user-details">
+            <div class="head">
+              <h3>Last 5 Bookings form Saptam</h3>
+              <button mat-button>View All Bookings</button>
+            </div>
+            <div class="details-1">
+              <div class="items1">Orders</div>
+              <div class="items1">Service</div>
+              <div class="items1">Weight</div>
+              <div class="items1">Pickup Time</div>
+              <div class="items1">Delivery Time</div>
+              <div class="items1">Status</div>
+              <div class="items1">Total Amount</div>
+            </div>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="done">In Progress</div>
+                    <div class="item2" id="done">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            
+          </div>
+
+        </mat-expansion-panel>
+
+        <!-- FIELD -4 -->
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header #headerpanel id="headerpanel">
+            <mat-panel-title>
+              <div class="table-2">
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Kartik Sharma</p></div>
+                <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
+                <div class="items"><p>15</p></div>
+                <div class="items"><p>04</p></div>
+                <div class="items"><p>₹225</p></div>
+                <div class="items"><p>₹100</p></div>
+                <div class="items"><p>₹25,000</p></div>
+                <div class="items">
+                  <mat-icon>highlight_off</mat-icon>
+                  <mat-icon>delete</mat-icon>
+                  <mat-icon>history</mat-icon>
+                </div>
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          
+          <div class="user-header">
+            <div class="img"><img src="assets/dp.png" alt=""></div>
+              <div class="name">
+                <p>Name: Kartik Sharma</p>
+                <p>Email: Example@gmail.com</p>
+              </div>
+              <div class="address">
+                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <p class="phone">Phone: 9995566633</p>
+              </div>
+              <div class="icons">
+                <mat-icon> call</mat-icon>
+                <mat-icon> email</mat-icon>
+              </div>
+          </div>
+          <div class="user-details">
+            <div class="head">
+              <h3>Last 5 Bookings form Kartik Sharma</h3>
+              <button mat-button>View All Bookings</button>
+            </div>
+            <div class="details-1">
+              <div class="items1">Orders</div>
+              <div class="items1">Service</div>
+              <div class="items1">Weight</div>
+              <div class="items1">Pickup Time</div>
+              <div class="items1">Delivery Time</div>
+              <div class="items1">Status</div>
+              <div class="items1">Total Amount</div>
+            </div>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="done">In Progress</div>
+                    <div class="item2" id="done">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            
+          </div>
+
+        </mat-expansion-panel>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+
+
+
 </div>

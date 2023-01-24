@@ -3,25 +3,28 @@ import { CommonModule } from '@angular/common';
 
 import { UsersRoutingModule } from './users-routing.module';
 import { UsersComponent } from './users.component';
-import { MatLegacyButtonModule as MatButtonModule } from 
-    '@angular/material/legacy-button';
+import {  MatButtonModule } from 
+    '@angular/material/button';
 import { MatButtonToggleModule } from 
     '@angular/material/button-toggle';
 import { MatDatepickerModule } from 
     '@angular/material/datepicker';
-import { MatLegacyInputModule as MatInputModule } from 
-    '@angular/material/legacy-input';
-import { MatLegacyFormFieldModule as MatFormFieldModule } from 
-    '@angular/material/legacy-form-field';
+import { MatInputModule } from 
+    '@angular/material/input';
+import { MatFormFieldModule } from 
+    '@angular/material/form-field';
 import { MatNativeDateModule } from 
     '@angular/material/core';
-import { MatLegacyOptionModule as MatOptionModule } from 
-    '@angular/material/legacy-core';
+import { MatOptionModule } from 
+    '@angular/material/core';
 import { UserComponent } from './user/user.component';
 
-import { MatLegacyPaginatorModule as MatPaginatorModule } from '@angular/material/legacy-paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatLegacySelectModule as MatSelectModule } from '@angular/material/legacy-select';
+import { MatSelectModule } from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+
 @NgModule({
   declarations: [
     UsersComponent,
@@ -39,7 +42,9 @@ import { MatLegacySelectModule as MatSelectModule } from '@angular/material/lega
     MatPaginatorModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    MatExpansionModule,
+    MatIconModule
   ]
 })
 export class UsersModule { }

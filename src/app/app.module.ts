@@ -11,7 +11,6 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/legacy-snack-bar';
 import { DataProvider } from './providers/data.provider';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -25,7 +24,6 @@ import { DataProvider } from './providers/data.provider';
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     BrowserAnimationsModule,
- 
   ],
   providers: [DataProvider],
   bootstrap: [AppComponent]
