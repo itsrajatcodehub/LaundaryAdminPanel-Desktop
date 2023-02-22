@@ -177,7 +177,18 @@
 <!--  NEW UI -->
 <div class="main-container">
   <div class="header">
-    <div class="search"><i class="ri-search-line"></i><input type="text" placeholder="Search"></div>
+    <!-- <div class="search">
+      <i class="ri-search-line"></i><input type="text" placeholder="Search">
+    </div> -->
+
+    <div class="searchbox">
+      <mat-form-field appearance="outline">
+        <mat-label>Search</mat-label>
+        <span matPrefix><mat-icon>search</mat-icon></span>
+        <input matInput>
+      </mat-form-field>
+    
+    </div>
 
     <div class="icons">
       <button mat-stroked-button color="primary">
@@ -256,9 +267,9 @@
                 <div class="items"><p>₹100</p></div>
                 <div class="items"><p>₹25,000</p></div>
                 <div class="items">
-                  <mat-icon>highlight_off</mat-icon>
-                  <mat-icon>delete</mat-icon>
-                  <mat-icon>history</mat-icon>
+                  <mat-icon style="color: red;">highlight_off</mat-icon>
+                  <mat-icon style="color: red;">delete</mat-icon>
+                  <mat-icon style="color: green">history</mat-icon>
                 </div>
               </div>
             </mat-panel-title>
@@ -271,7 +282,8 @@
                 <p>Email: Example@gmail.com</p>
               </div>
               <div class="address">
-                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                 <p class="phone">Phone: 9995566633</p>
               </div>
               <div class="icons">
@@ -338,7 +350,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -358,7 +371,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -372,7 +385,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -458,7 +522,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -478,7 +543,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -492,7 +557,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -535,7 +651,7 @@
                 </div>
                 </mat-expansion-panel>
             <!-- ROW - 3 -->
-                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   <div class="details-2">
@@ -578,7 +694,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -598,7 +715,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -612,7 +729,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -653,10 +821,8 @@
                     </div>
                   </div>
                 </div>
-                </mat-expansion-panel>
-            
+                </mat-expansion-panel>    
           </div>
-
         </mat-expansion-panel>
 
         <!-- FIELD - 2 -->
@@ -664,7 +830,7 @@
           <mat-expansion-panel-header #headerpanel id="headerpanel">
             <mat-panel-title>
               <div class="table-2">
-                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Shyam</p></div>
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Arun Arora</p></div>
                 <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
                 <div class="items"><p>15</p></div>
                 <div class="items"><p>04</p></div>
@@ -672,9 +838,9 @@
                 <div class="items"><p>₹100</p></div>
                 <div class="items"><p>₹25,000</p></div>
                 <div class="items">
-                  <mat-icon>highlight_off</mat-icon>
-                  <mat-icon>delete</mat-icon>
-                  <mat-icon>history</mat-icon>
+                  <mat-icon style="color: red;">highlight_off</mat-icon>
+                  <mat-icon style="color: red;">delete</mat-icon>
+                  <mat-icon style="color: green">history</mat-icon>
                 </div>
               </div>
             </mat-panel-title>
@@ -683,11 +849,12 @@
           <div class="user-header">
             <div class="img"><img src="assets/dp.png" alt=""></div>
               <div class="name">
-                <p>Name: Shyam</p>
+                <p>Name: Arun Arora</p>
                 <p>Email: Example@gmail.com</p>
               </div>
               <div class="address">
-                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                 <p class="phone">Phone: 9995566633</p>
               </div>
               <div class="icons">
@@ -697,7 +864,7 @@
           </div>
           <div class="user-details">
             <div class="head">
-              <h3>Last 5 Bookings form Shyam</h3>
+              <h3>Last 5 Bookings form Arun Arora</h3>
               <button mat-button>View All Bookings</button>
             </div>
             <div class="details-1">
@@ -720,8 +887,8 @@
                     <div class="item2">12 Kg</div>
                     <div class="item2">12 April, 12:00 PM</div>
                     <div class="item2">12 April, 2:00 PM</div>
-                    <div class="item2" id="done">Completed</div>
-                    <div class="item2" id="done">Rs 460</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
                   </div>
                 </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -754,7 +921,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -774,7 +942,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -788,7 +956,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -830,7 +1049,6 @@
                   </div>
                 </div>
                 </mat-expansion-panel>
-            
             <!-- ROW - 2 -->
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
@@ -841,8 +1059,8 @@
                     <div class="item2">12 Kg</div>
                     <div class="item2">12 April, 12:00 PM</div>
                     <div class="item2">12 April, 2:00 PM</div>
-                    <div class="item2" id="done">Completed</div>
-                    <div class="item2" id="done">Rs 460</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
                   </div>
                 </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -875,7 +1093,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -895,7 +1114,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -909,7 +1128,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -951,7 +1221,6 @@
                   </div>
                 </div>
                 </mat-expansion-panel>
-
             <!-- ROW - 3 -->
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
@@ -962,8 +1231,8 @@
                     <div class="item2">12 Kg</div>
                     <div class="item2">12 April, 12:00 PM</div>
                     <div class="item2">12 April, 2:00 PM</div>
-                    <div class="item2" id="done">Completed</div>
-                    <div class="item2" id="done">Rs 460</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
                   </div>
                 </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -996,7 +1265,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -1016,7 +1286,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -1030,7 +1300,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -1071,10 +1392,8 @@
                     </div>
                   </div>
                 </div>
-                </mat-expansion-panel>
-            
+                </mat-expansion-panel>    
           </div>
-
         </mat-expansion-panel>
 
         <!-- FIELD - 3 -->
@@ -1082,7 +1401,7 @@
           <mat-expansion-panel-header #headerpanel id="headerpanel">
             <mat-panel-title>
               <div class="table-2">
-                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Saptam</p></div>
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Arun Arora</p></div>
                 <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
                 <div class="items"><p>15</p></div>
                 <div class="items"><p>04</p></div>
@@ -1090,9 +1409,9 @@
                 <div class="items"><p>₹100</p></div>
                 <div class="items"><p>₹25,000</p></div>
                 <div class="items">
-                  <mat-icon>highlight_off</mat-icon>
-                  <mat-icon>delete</mat-icon>
-                  <mat-icon>history</mat-icon>
+                  <mat-icon style="color: red;">highlight_off</mat-icon>
+                  <mat-icon style="color: red;">delete</mat-icon>
+                  <mat-icon style="color: green">history</mat-icon>
                 </div>
               </div>
             </mat-panel-title>
@@ -1101,11 +1420,12 @@
           <div class="user-header">
             <div class="img"><img src="assets/dp.png" alt=""></div>
               <div class="name">
-                <p>Name: Saptam</p>
+                <p>Name: Arun Arora</p>
                 <p>Email: Example@gmail.com</p>
               </div>
               <div class="address">
-                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                 <p class="phone">Phone: 9995566633</p>
               </div>
               <div class="icons">
@@ -1115,7 +1435,7 @@
           </div>
           <div class="user-details">
             <div class="head">
-              <h3>Last 5 Bookings form Saptam</h3>
+              <h3>Last 5 Bookings form Arun Arora</h3>
               <button mat-button>View All Bookings</button>
             </div>
             <div class="details-1">
@@ -1128,6 +1448,7 @@
               <div class="items1">Total Amount</div>
             </div>
 
+            <!-- ROW - 1 -->
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -1137,8 +1458,8 @@
                     <div class="item2">12 Kg</div>
                     <div class="item2">12 April, 12:00 PM</div>
                     <div class="item2">12 April, 2:00 PM</div>
-                    <div class="item2" id="done">In Progress</div>
-                    <div class="item2" id="done">Rs 460</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
                   </div>
                 </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -1171,7 +1492,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -1191,7 +1513,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -1205,7 +1527,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -1247,9 +1620,351 @@
                   </div>
                 </div>
                 </mat-expansion-panel>
-            
+            <!-- ROW - 2 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <!-- <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            <!-- ROW - 3 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <!-- <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>    
           </div>
-
         </mat-expansion-panel>
 
         <!-- FIELD -4 -->
@@ -1257,7 +1972,7 @@
           <mat-expansion-panel-header #headerpanel id="headerpanel">
             <mat-panel-title>
               <div class="table-2">
-                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Kartik Sharma</p></div>
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Arun Arora</p></div>
                 <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
                 <div class="items"><p>15</p></div>
                 <div class="items"><p>04</p></div>
@@ -1265,9 +1980,9 @@
                 <div class="items"><p>₹100</p></div>
                 <div class="items"><p>₹25,000</p></div>
                 <div class="items">
-                  <mat-icon>highlight_off</mat-icon>
-                  <mat-icon>delete</mat-icon>
-                  <mat-icon>history</mat-icon>
+                  <mat-icon style="color: red;">highlight_off</mat-icon>
+                  <mat-icon style="color: red;">delete</mat-icon>
+                  <mat-icon style="color: green">history</mat-icon>
                 </div>
               </div>
             </mat-panel-title>
@@ -1276,11 +1991,12 @@
           <div class="user-header">
             <div class="img"><img src="assets/dp.png" alt=""></div>
               <div class="name">
-                <p>Name: Kartik Sharma</p>
+                <p>Name: Arun Arora</p>
                 <p>Email: Example@gmail.com</p>
               </div>
               <div class="address">
-                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                 <p class="phone">Phone: 9995566633</p>
               </div>
               <div class="icons">
@@ -1290,7 +2006,7 @@
           </div>
           <div class="user-details">
             <div class="head">
-              <h3>Last 5 Bookings form Kartik Sharma</h3>
+              <h3>Last 5 Bookings form Arun Arora</h3>
               <button mat-button>View All Bookings</button>
             </div>
             <div class="details-1">
@@ -1303,6 +2019,7 @@
               <div class="items1">Total Amount</div>
             </div>
 
+            <!-- ROW - 1 -->
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -1312,8 +2029,8 @@
                     <div class="item2">12 Kg</div>
                     <div class="item2">12 April, 12:00 PM</div>
                     <div class="item2">12 April, 2:00 PM</div>
-                    <div class="item2" id="done">In Progress</div>
-                    <div class="item2" id="done">Rs 460</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
                   </div>
                 </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -1346,7 +2063,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -1366,7 +2084,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -1380,7 +2098,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -1422,9 +2191,351 @@
                   </div>
                 </div>
                 </mat-expansion-panel>
-            
+            <!-- ROW - 2 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <!-- <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            <!-- ROW - 3 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <!-- <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>    
           </div>
-
         </mat-expansion-panel>
 
       </mat-expansion-panel>
@@ -1487,9 +2598,9 @@
                 <div class="items"><p>₹100</p></div>
                 <div class="items"><p>₹25,000</p></div>
                 <div class="items">
-                  <mat-icon>highlight_off</mat-icon>
-                  <mat-icon>delete</mat-icon>
-                  <mat-icon>history</mat-icon>
+                  <mat-icon style="color: red;">highlight_off</mat-icon>
+                  <mat-icon style="color: red;">delete</mat-icon>
+                  <mat-icon style="color: green">history</mat-icon>
                 </div>
               </div>
             </mat-panel-title>
@@ -1502,7 +2613,8 @@
                 <p>Email: Example@gmail.com</p>
               </div>
               <div class="address">
-                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                 <p class="phone">Phone: 9995566633</p>
               </div>
               <div class="icons">
@@ -1569,7 +2681,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -1589,7 +2702,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -1603,7 +2716,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -1689,7 +2853,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -1709,7 +2874,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -1723,7 +2888,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -1766,7 +2982,7 @@
                 </div>
                 </mat-expansion-panel>
             <!-- ROW - 3 -->
-                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   <div class="details-2">
@@ -1809,7 +3025,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -1829,7 +3046,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -1843,7 +3060,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -1884,10 +3152,8 @@
                     </div>
                   </div>
                 </div>
-                </mat-expansion-panel>
-            
+                </mat-expansion-panel>    
           </div>
-
         </mat-expansion-panel>
 
         <!-- FIELD - 2 -->
@@ -1895,7 +3161,7 @@
           <mat-expansion-panel-header #headerpanel id="headerpanel">
             <mat-panel-title>
               <div class="table-2">
-                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Shyam</p></div>
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Arun Arora</p></div>
                 <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
                 <div class="items"><p>15</p></div>
                 <div class="items"><p>04</p></div>
@@ -1903,9 +3169,9 @@
                 <div class="items"><p>₹100</p></div>
                 <div class="items"><p>₹25,000</p></div>
                 <div class="items">
-                  <mat-icon>highlight_off</mat-icon>
-                  <mat-icon>delete</mat-icon>
-                  <mat-icon>history</mat-icon>
+                  <mat-icon style="color: red;">highlight_off</mat-icon>
+                  <mat-icon style="color: red;">delete</mat-icon>
+                  <mat-icon style="color: green">history</mat-icon>
                 </div>
               </div>
             </mat-panel-title>
@@ -1914,11 +3180,12 @@
           <div class="user-header">
             <div class="img"><img src="assets/dp.png" alt=""></div>
               <div class="name">
-                <p>Name: Shyam</p>
+                <p>Name: Arun Arora</p>
                 <p>Email: Example@gmail.com</p>
               </div>
               <div class="address">
-                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                 <p class="phone">Phone: 9995566633</p>
               </div>
               <div class="icons">
@@ -1928,7 +3195,7 @@
           </div>
           <div class="user-details">
             <div class="head">
-              <h3>Last 5 Bookings form Shyam</h3>
+              <h3>Last 5 Bookings form Arun Arora</h3>
               <button mat-button>View All Bookings</button>
             </div>
             <div class="details-1">
@@ -1951,8 +3218,8 @@
                     <div class="item2">12 Kg</div>
                     <div class="item2">12 April, 12:00 PM</div>
                     <div class="item2">12 April, 2:00 PM</div>
-                    <div class="item2" id="done">Completed</div>
-                    <div class="item2" id="done">Rs 460</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
                   </div>
                 </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -1985,7 +3252,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -2005,7 +3273,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -2019,7 +3287,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -2061,7 +3380,6 @@
                   </div>
                 </div>
                 </mat-expansion-panel>
-            
             <!-- ROW - 2 -->
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
@@ -2072,8 +3390,8 @@
                     <div class="item2">12 Kg</div>
                     <div class="item2">12 April, 12:00 PM</div>
                     <div class="item2">12 April, 2:00 PM</div>
-                    <div class="item2" id="done">Completed</div>
-                    <div class="item2" id="done">Rs 460</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
                   </div>
                 </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -2106,7 +3424,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -2126,7 +3445,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -2140,7 +3459,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -2182,7 +3552,6 @@
                   </div>
                 </div>
                 </mat-expansion-panel>
-
             <!-- ROW - 3 -->
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
@@ -2193,8 +3562,8 @@
                     <div class="item2">12 Kg</div>
                     <div class="item2">12 April, 12:00 PM</div>
                     <div class="item2">12 April, 2:00 PM</div>
-                    <div class="item2" id="done">Completed</div>
-                    <div class="item2" id="done">Rs 460</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
                   </div>
                 </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -2227,7 +3596,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -2247,7 +3617,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -2261,7 +3631,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -2302,10 +3723,8 @@
                     </div>
                   </div>
                 </div>
-                </mat-expansion-panel>
-            
+                </mat-expansion-panel>    
           </div>
-
         </mat-expansion-panel>
 
         <!-- FIELD - 3 -->
@@ -2313,7 +3732,7 @@
           <mat-expansion-panel-header #headerpanel id="headerpanel">
             <mat-panel-title>
               <div class="table-2">
-                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Saptam</p></div>
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Arun Arora</p></div>
                 <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
                 <div class="items"><p>15</p></div>
                 <div class="items"><p>04</p></div>
@@ -2321,9 +3740,9 @@
                 <div class="items"><p>₹100</p></div>
                 <div class="items"><p>₹25,000</p></div>
                 <div class="items">
-                  <mat-icon>highlight_off</mat-icon>
-                  <mat-icon>delete</mat-icon>
-                  <mat-icon>history</mat-icon>
+                  <mat-icon style="color: red;">highlight_off</mat-icon>
+                  <mat-icon style="color: red;">delete</mat-icon>
+                  <mat-icon style="color: green">history</mat-icon>
                 </div>
               </div>
             </mat-panel-title>
@@ -2332,11 +3751,12 @@
           <div class="user-header">
             <div class="img"><img src="assets/dp.png" alt=""></div>
               <div class="name">
-                <p>Name: Saptam</p>
+                <p>Name: Arun Arora</p>
                 <p>Email: Example@gmail.com</p>
               </div>
               <div class="address">
-                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                 <p class="phone">Phone: 9995566633</p>
               </div>
               <div class="icons">
@@ -2346,7 +3766,7 @@
           </div>
           <div class="user-details">
             <div class="head">
-              <h3>Last 5 Bookings form Saptam</h3>
+              <h3>Last 5 Bookings form Arun Arora</h3>
               <button mat-button>View All Bookings</button>
             </div>
             <div class="details-1">
@@ -2359,6 +3779,7 @@
               <div class="items1">Total Amount</div>
             </div>
 
+            <!-- ROW - 1 -->
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -2368,8 +3789,8 @@
                     <div class="item2">12 Kg</div>
                     <div class="item2">12 April, 12:00 PM</div>
                     <div class="item2">12 April, 2:00 PM</div>
-                    <div class="item2" id="done">In Progress</div>
-                    <div class="item2" id="done">Rs 460</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
                   </div>
                 </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -2402,7 +3823,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -2422,7 +3844,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -2436,7 +3858,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -2478,9 +3951,351 @@
                   </div>
                 </div>
                 </mat-expansion-panel>
-            
+            <!-- ROW - 2 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <!-- <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            <!-- ROW - 3 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <!-- <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>    
           </div>
-
         </mat-expansion-panel>
 
         <!-- FIELD -4 -->
@@ -2488,7 +4303,7 @@
           <mat-expansion-panel-header #headerpanel id="headerpanel">
             <mat-panel-title>
               <div class="table-2">
-                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Kartik Sharma</p></div>
+                <div class="items"><img src="assets/mini-dp.png" alt=""><p> Arun Arora</p></div>
                 <div class="items"><i class="ri-phone-line"></i><p> 9566332544</p></div>
                 <div class="items"><p>15</p></div>
                 <div class="items"><p>04</p></div>
@@ -2496,9 +4311,9 @@
                 <div class="items"><p>₹100</p></div>
                 <div class="items"><p>₹25,000</p></div>
                 <div class="items">
-                  <mat-icon>highlight_off</mat-icon>
-                  <mat-icon>delete</mat-icon>
-                  <mat-icon>history</mat-icon>
+                  <mat-icon style="color: red;">highlight_off</mat-icon>
+                  <mat-icon style="color: red;">delete</mat-icon>
+                  <mat-icon style="color: green">history</mat-icon>
                 </div>
               </div>
             </mat-panel-title>
@@ -2507,11 +4322,12 @@
           <div class="user-header">
             <div class="img"><img src="assets/dp.png" alt=""></div>
               <div class="name">
-                <p>Name: Kartik Sharma</p>
+                <p>Name: Arun Arora</p>
                 <p>Email: Example@gmail.com</p>
               </div>
               <div class="address">
-                <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                 <p class="phone">Phone: 9995566633</p>
               </div>
               <div class="icons">
@@ -2521,7 +4337,7 @@
           </div>
           <div class="user-details">
             <div class="head">
-              <h3>Last 5 Bookings form Kartik Sharma</h3>
+              <h3>Last 5 Bookings form Arun Arora</h3>
               <button mat-button>View All Bookings</button>
             </div>
             <div class="details-1">
@@ -2534,6 +4350,7 @@
               <div class="items1">Total Amount</div>
             </div>
 
+            <!-- ROW - 1 -->
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -2543,8 +4360,8 @@
                     <div class="item2">12 Kg</div>
                     <div class="item2">12 April, 12:00 PM</div>
                     <div class="item2">12 April, 2:00 PM</div>
-                    <div class="item2" id="done">In Progress</div>
-                    <div class="item2" id="done">Rs 460</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
                   </div>
                 </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -2577,7 +4394,8 @@
                           <p>Email: Example@gmail.com</p>
                         </div>
                         <div class="address">
-                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
                           <p class="phone">Phone: 9995566633</p>
                         </div>
                         <div class="icons">
@@ -2597,7 +4415,7 @@
                     </div>
                     <div class="payment-details">
                       <div class="clothes">
-                        <h3>Wash & Iron</h3>
+                        <!-- <h3>Wash & Iron</h3>
                         <div class="clothes-details">
                           <p>
                             <span>Trousers</span>
@@ -2611,7 +4429,58 @@
                             <span>Pant</span>
                             <span>3</span>
                           </p>
-                        </div>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
                       </div>
                       <div class="bill">
                         <h3>Billing Summary</h3>
@@ -2653,9 +4522,351 @@
                   </div>
                 </div>
                 </mat-expansion-panel>
-            
+            <!-- ROW - 2 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <!-- <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>
+            <!-- ROW - 3 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="details-2">
+                    <div class="item2">#UL13-072 </div>
+                    <div class="item2">Wash & Iron</div>
+                    <div class="item2">12 Kg</div>
+                    <div class="item2">12 April, 12:00 PM</div>
+                    <div class="item2">12 April, 2:00 PM</div>
+                    <div class="item2" id="progress">In Progress</div>
+                    <div class="item2" id="progress">Rs 460</div>
+                  </div>
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="details-detail">
+                  <div class="details-head">
+                    <h3>Pickup Agent Details</h3>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Arun Arora</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="details-user">
+                    <div class="user-header">
+                      <div class="img"><img src="assets/dp2.png" alt=""></div>
+                        <div class="name">
+                          <p>Name: Ashish Rohra</p>
+                          <p>Email: Example@gmail.com</p>
+                        </div>
+                        <div class="address">
+                          <!-- <p class="location"><mat-icon> location_on</mat-icon>Robert Robertson, 1234 NW Bobcat Lane</p> -->
+                          <p class="location">Add: Robert Robertson, 1234 NW Bobcat Lane</p>
+                          <p class="phone">Phone: 9995566633</p>
+                        </div>
+                        <div class="icons">
+                          <mat-icon> call</mat-icon>
+                          <mat-icon> email</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="payment">
+                    <h3>Order Details</h3>
+                    <div class="headings">
+                      <div class="item-head">Order ID: #UL13-072 </div>
+                      <div class="item-head">Pickup : 12 April, 12:00 PM</div>
+                      <div class="item-head">Expected Delivery : 12 April, 12:00 PM</div>
+                      <div class="item-head">Status :</div>
+                      <div class="item-head" id="done">Delivered</div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="clothes">
+                        <!-- <h3>Wash & Iron</h3>
+                        <div class="clothes-details">
+                          <p>
+                            <span>Trousers</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Syberian long coat tailor made</span>
+                            <span>3</span>
+                          </p>
+                          <p>
+                            <span>Pant</span>
+                            <span>3</span>
+                          </p>
+                        </div> -->
+                        <mat-tab-group>
+                          <mat-tab label="Wash & Iron">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Dry Cleaning">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Third">
+                            <div class="clothes-details">
+                              <p>
+                                <span>Trousers</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Syberian long coat tailor made</span>
+                                <span>3</span>
+                              </p>
+                              <p>
+                                <span>Pant</span>
+                                <span>3</span>
+                              </p>
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                        
+                      </div>
+                      <div class="bill">
+                        <h3>Billing Summary</h3>
+                        <p>
+                          <span>Subtotal</span>
+                          <span>₹1200</span>
+                        </p>
+                        <p>
+                          <span>Pant - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>Shirt - 3</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>You Saved</span>
+                          <span>₹60</span>
+                        </p>
+                        <p>
+                          <span>GST</span>
+                          <span>₹161</span>
+                        </p>
+                        <p>
+                          <span>Tax</span>
+                          <span>₹21</span>
+                        </p>
+                        <p>
+                          <span>Delivery</span>
+                          <span>Free</span>
+                        </p>
+                        <p class="total-amount">
+                          <span>Total amount</span>
+                          <span>₹1502</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </mat-expansion-panel>    
           </div>
-
         </mat-expansion-panel>
 
       </mat-expansion-panel>

@@ -24,6 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatSelectModule,
     MatOptionModule,
     MatExpansionModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatTabsModule
   ]
 })
 export class UsersModule { }

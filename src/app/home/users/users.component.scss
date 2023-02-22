@@ -486,26 +486,40 @@
     justify-content: space-between;
     width: 100%;
 
-    .search {
+    // .search {
+    //   display: flex;
+    //   border: 1px solid #676879;
+    //   border-radius: 4px;
+    //   padding: 5px 15px;
+    //   width: 55%;
+    //   height: 40px;
+    //   margin-top: 13px;
+    //   height: 45px;
+
+    //   i {
+    //     margin-top: 5px;
+    //   }
+
+    //   input {
+    //     border: 0;
+    //     outline: 0;
+    //     margin-left: 7px;
+    //     width: 100%;
+    //   }
+    // }
+
+    .searchbox{
       display: flex;
-      border: 1px solid #676879;
-      border-radius: 4px;
-      padding: 5px 15px;
-      width: 55%;
-      height: 40px;
-      margin-top: 13px;
-      height: 45px;
 
-      i {
-        margin-top: 5px;
-      }
+     mat-form-field{
+      width: 60em;
+      height: 0px;
 
-      input {
-        border: 0;
-        outline: 0;
-        margin-left: 7px;
-        width: 100%;
+      span{
+        margin-right: 10px;
+        margin-left: 10px;
       }
+     }
     }
 
     .icons {
@@ -516,13 +530,14 @@
       button {
         display: flex;
         width: 150px;
-        margin-top: 5px;
-        height: 60px;
+        margin-top: 14px;
+        height: 40px;
+
 
         i {
           margin-right: 5px;
-          font-size: 20px;
         }
+
       }
 
 
@@ -573,6 +588,7 @@
           margin: 0;
           font-weight: bold;
           color: #579540;
+          font-size: 20px;
         }
 
         p {
@@ -626,7 +642,7 @@
     }
 
     mat-expansion-panel-header {
-      border: 1px solid #9E9E9E;
+      // border: 1px solid #9E9E9E;
       // border-radius: 12px;
       height: 75px;
 
@@ -637,7 +653,7 @@
         width: 100%;
 
         .items {
-          font-size: 20px;
+          font-size: 14px;
           display: flex;
 
           p {
@@ -662,7 +678,7 @@
       grid-template-columns: 1fr 3fr 4fr 0.5fr;
 
       .name {
-        font-size: 20px;
+        font-size: 15px;
         padding-top: 20px;
         padding-left: 30px;
         color: #444;
@@ -671,11 +687,14 @@
 
       .address {
 
-        font-size: 20px;
+        font-size: 15px;
         padding-top: 20px;
         color: #444;
         width: 40%;
 
+        mat-icon{
+          transform: translateY(6px);
+        }
       }
 
       .icons {
@@ -683,6 +702,10 @@
         width: 70%;
         display: flex;
         justify-content: space-between;
+
+        mat-icon{
+          color: green;
+        }
       }
     }
 
@@ -692,11 +715,22 @@
       .head {
         display: flex;
         justify-content: space-between;
+        
+        h3{
+          font-size: 18px;
+        }
+
+        button, mat-button{
+          font-size: 14px;
+          height: 30px;
+          font-family: 'Lato';
+        }
       }
 
       button {
         color: #fff;
         background: #579540;
+        font-size: 18px;
       }
 
 
@@ -704,7 +738,7 @@
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 15px;
       }
 
@@ -713,12 +747,18 @@
         display: grid;
         // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr 1fr 0.8fr;
-        font-size: 20px;
+        font-size: 14px;
         margin-bottom: 15px;
         padding-top: 20px;
       }
 
       .details-detail {
+
+        .details-head{
+          h3{
+            font-size: 15px;
+          }
+        }
 
         .details-user {
           .user-header {
@@ -726,7 +766,7 @@
             grid-template-columns: 1fr 3fr 4fr 0.5fr;
 
             .name {
-              font-size: 20px;
+              font-size: 15px;
               padding-top: 20px;
               padding-left: 30px;
               color: #444;
@@ -735,7 +775,7 @@
 
             .address {
 
-              font-size: 20px;
+              font-size: 15px;
               padding-top: 20px;
               color: #444;
               width: 40%;
@@ -755,10 +795,14 @@
       .payment {
         margin-top: 20px;
 
+        h3{
+          font-size: 18px;
+        }
+
         .headings {
           display: grid;
           grid-template-columns: 2fr 2fr 3fr 0.5fr 0.5fr;
-          font-size: 20px;
+          font-size: 18px;
           font-weight: bold;
           border-bottom: 2px solid #4444;
           padding-bottom: 12px;
@@ -772,7 +816,7 @@
           .clothes {
             width: 50%;
             padding: 0 20px;
-            font-size: 18px;
+            font-size: 15px;
             font-family: 'Lato';
             color: #7D7D7D;
 
@@ -802,7 +846,7 @@
               padding: 0 20px;
 
               span {
-                font-size: 20px;
+                font-size: 18px;
               }
             }
 
